@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/drawer_profile"
+            android:icon="@drawable/profile_icon"
+            android:title="Profile" />
+        <item
+            android:id="@+id/drawer_classes"
+            android:icon="@drawable/classes_icon"
+            android:title="Classes" />
+        <item
+            android:id="@+id/stud_drawer_materials"
+            android:icon="@drawable/course_material"
+            android:title="Course Materials" />
+        <item
+            android:id="@+id/drawer_calender"
+            android:icon="@drawable/calendar_icon"
+            android:title="Calender" />
+
+        <item
+            android:id="@+id/drawer_about_us"
+            android:icon="@drawable/aboutus_icon"
+            android:title="About us" />
+
+        <item
+            android:id="@+id/drawer_Settings"
+            android:icon="@drawable/settings_icon"
+            android:title="Settings" />
+
+</menu>

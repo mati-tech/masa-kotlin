@@ -1,0 +1,678 @@
+{
+  "A1": [
+    {
+      "type": "GRAMMAR",
+      "questions": [
+        {
+          "question": "What is the correct form of the verb 'to be'?",
+          "options": ["am", "is", "are"],
+          "answer": "am"
+        },
+        {
+          "question": "What is the opposite of 'hot'?",
+          "options": ["cold", "warm", "cool"],
+          "answer": "cold"
+        },
+        {
+          "question": "Which of the following is a color?",
+          "options": ["book", "blue", "run"],
+          "answer": "blue"
+        },
+        {
+          "question": "What do you use to write on paper?",
+          "options": ["pen", "apple", "cat"],
+          "answer": "pen"
+        },
+        {
+          "question": "What is the plural of 'cat'?",
+          "options": ["cats", "cat's", "cat"],
+          "answer": "cats"
+        },
+        {
+          "question": "What is the opposite of 'big'?",
+          "options": ["small", "large", "long"],
+          "answer": "small"
+        },
+        {
+          "question": "Which of the following is a fruit?",
+          "options": ["car", "banana", "train"],
+          "answer": "banana"
+        },
+        {
+          "question": "What do you use to eat soup?",
+          "options": ["spoon", "fork", "knife"],
+          "answer": "spoon"
+        },
+        {
+          "question": "What is the past tense of 'eat'?",
+          "options": ["ate", "eaten", "eat"],
+          "answer": "ate"
+        },
+        {
+          "question": "Which of the following is a vegetable?",
+          "options": ["table", "lettuce", "book"],
+          "answer": "lettuce"
+        }
+      ]
+    },
+    {
+      "type": "VOCABULARY",
+      "questions": [
+        {
+          "question": "What is an 'apple'?",
+          "options": ["fruit", "vegetable", "animal"],
+          "answer": "fruit"
+        },
+        {
+          "question": "What is a 'dog'?",
+          "options": ["animal", "plant", "mineral"],
+          "answer": "animal"
+        },
+        {
+          "question": "What color is the 'sky'?",
+          "options": ["blue", "green", "red"],
+          "answer": "blue"
+        },
+        {
+          "question": "What is a 'car'?",
+          "options": ["vehicle", "animal", "fruit"],
+          "answer": "vehicle"
+        },
+        {
+          "question": "What is the opposite of 'big'?",
+          "options": ["small", "tall", "short"],
+          "answer": "small"
+        },
+        {
+          "question": "What is a 'banana'?",
+          "options": ["fruit", "vegetable", "toy"],
+          "answer": "fruit"
+        },
+        {
+          "question": "What is the plural of 'book'?",
+          "options": ["books", "book's", "bookes"],
+          "answer": "books"
+        },
+        {
+          "question": "Which of these is a 'color'?",
+          "options": ["yellow", "apple", "car"],
+          "answer": "yellow"
+        },
+        {
+          "question": "What is the opposite of 'happy'?",
+          "options": ["sad", "angry", "excited"],
+          "answer": "sad"
+        },
+        {
+          "question": "What is a 'teacher'?",
+          "options": ["person", "place", "thing"],
+          "answer": "person"
+        }
+      ]
+    }
+
+  ],
+  "A2": [
+    {
+      "type": "GRAMMAR",
+      "questions": [
+        {
+          "question": "What is the past tense of 'go'?",
+          "options": ["went", "gone", "goes"],
+          "answer": "went"
+        },
+        {
+          "question": "What is the past tense of 'eat'?",
+          "options": ["ate", "eaten", "eats"],
+          "answer": "ate"
+        },
+        {
+          "question": "Which of these is the correct use of 'there'?",
+          "options": ["Their house is big.", "There is a cat.", "They're coming."],
+          "answer": "There is a cat."
+        },
+        {
+          "question": "What is the comparative form of 'good'?",
+          "options": ["gooder", "better", "best"],
+          "answer": "better"
+        },
+        {
+          "question": "Which sentence is in the present continuous tense?",
+          "options": ["I eat breakfast.", "I am eating breakfast.", "I ate breakfast."],
+          "answer": "I am eating breakfast."
+        },
+        {
+          "question": "What is the superlative form of 'small'?",
+          "options": ["smallest", "smaller", "more small"],
+          "answer": "smallest"
+        },
+        {
+          "question": "What is the correct form of 'to have' in the third person singular?",
+          "options": ["has", "have", "haves"],
+          "answer": "has"
+        },
+        {
+          "question": "Which sentence uses the past perfect tense?",
+          "options": ["I had finished my work.", "I finished my work.", "I finish my work."],
+          "answer": "I had finished my work."
+        },
+        {
+          "question": "What is the plural form of 'child'?",
+          "options": ["childs", "children", "childes"],
+          "answer": "children"
+        },
+        {
+          "question": "Which of these sentences is correct?",
+          "options": ["He don't like it.", "He doesn't like it.", "He not like it."],
+          "answer": "He doesn't like it."
+        }
+      ]
+    },
+    {
+      "type": "VOCABULARY",
+      "questions": [
+        {
+          "question": "What is the synonym of 'happy'?",
+          "options": ["sad", "joyful", "angry"],
+          "answer": "joyful"
+        },
+        {
+          "question": "What is the antonym of 'difficult'?",
+          "options": ["easy", "hard", "tough"],
+          "answer": "easy"
+        },
+        {
+          "question": "What is a 'library'?",
+          "options": ["a place with books", "a place with food", "a place with animals"],
+          "answer": "a place with books"
+        },
+        {
+          "question": "What is the meaning of 'beautiful'?",
+          "options": ["ugly", "pretty", "average"],
+          "answer": "pretty"
+        },
+        {
+          "question": "Which of these is a 'profession'?",
+          "options": ["doctor", "tree", "apple"],
+          "answer": "doctor"
+        },
+        {
+          "question": "What is the opposite of 'noisy'?",
+          "options": ["quiet", "loud", "busy"],
+          "answer": "quiet"
+        },
+        {
+          "question": "What is the synonym of 'begin'?",
+          "options": ["end", "start", "finish"],
+          "answer": "start"
+        },
+        {
+          "question": "Which of these is a 'vehicle'?",
+          "options": ["car", "house", "banana"],
+          "answer": "car"
+        },
+        {
+          "question": "What is the meaning of 'delicious'?",
+          "options": ["tasty", "boring", "dirty"],
+          "answer": "tasty"
+        },
+        {
+          "question": "What is a 'beach'?",
+          "options": ["a place with sand and sea", "a place with mountains", "a place with buildings"],
+          "answer": "a place with sand and sea"
+        }
+      ]
+    }
+  ],
+  "B1": [
+    {
+      "type": "GRAMMAR",
+      "questions": [
+        {
+          "question": "What is the past tense of 'see'?",
+          "options": ["saw", "seen", "sees"],
+          "answer": "saw"
+        },
+        {
+          "question": "Which sentence uses the future continuous tense?",
+          "options": ["I will be traveling tomorrow.", "I travel tomorrow.", "I have traveled tomorrow."],
+          "answer": "I will be traveling tomorrow."
+        },
+        {
+          "question": "What is the correct form of 'to be' in the present perfect tense?",
+          "options": ["has been", "is being", "was being"],
+          "answer": "has been"
+        },
+        {
+          "question": "Which of these sentences is in the passive voice?",
+          "options": ["She is reading a book.", "A book is being read by her.", "She reads a book."],
+          "answer": "A book is being read by her."
+        },
+        {
+          "question": "What is the correct form of 'to go' in the past perfect tense?",
+          "options": ["had gone", "has gone", "went"],
+          "answer": "had gone"
+        },
+        {
+          "question": "Which of these is a correct conditional sentence?",
+          "options": ["If I have money, I will buy a car.", "If I had money, I buy a car.", "If I has money, I would buy a car."],
+          "answer": "If I have money, I will buy a car."
+        },
+        {
+          "question": "What is the correct form of 'to eat' in the future perfect tense?",
+          "options": ["will have eaten", "will ate", "will be eating"],
+          "answer": "will have eaten"
+        },
+        {
+          "question": "What is the correct comparative form of 'interesting'?",
+          "options": ["more interesting", "interestinger", "most interesting"],
+          "answer": "more interesting"
+        },
+        {
+          "question": "Which of these sentences is correct?",
+          "options": ["She don't like apples.", "She doesn't likes apples.", "She doesn't like apples."],
+          "answer": "She doesn't like apples."
+        },
+        {
+          "question": "Which of these is an example of direct speech?",
+          "options": ["She said that she was tired.", "She said, 'I am tired.'", "She was tired, she said."],
+          "answer": "She said, 'I am tired.'"
+        }
+      ]
+    },
+    {
+      "type": "VOCABULARY",
+      "questions": [
+        {
+          "question": "What is the synonym of 'intelligent'?",
+          "options": ["smart", "stupid", "lazy"],
+          "answer": "smart"
+        },
+        {
+          "question": "What is the antonym of 'brave'?",
+          "options": ["cowardly", "fearless", "bold"],
+          "answer": "cowardly"
+        },
+        {
+          "question": "What does 'transparent' mean?",
+          "options": ["see-through", "opaque", "translucent"],
+          "answer": "see-through"
+        },
+        {
+          "question": "Which word means 'very big'?",
+          "options": ["tiny", "huge", "small"],
+          "answer": "huge"
+        },
+        {
+          "question": "What is a 'pharmacy'?",
+          "options": ["a place where medicine is sold", "a place where books are sold", "a place where food is sold"],
+          "answer": "a place where medicine is sold"
+        },
+        {
+          "question": "What is the synonym of 'quick'?",
+          "options": ["fast", "slow", "steady"],
+          "answer": "fast"
+        },
+        {
+          "question": "What does 'fortunate' mean?",
+          "options": ["lucky", "unlucky", "neutral"],
+          "answer": "lucky"
+        },
+        {
+          "question": "What is the antonym of 'dangerous'?",
+          "options": ["safe", "risky", "hazardous"],
+          "answer": "safe"
+        },
+        {
+          "question": "What does 'urban' mean?",
+          "options": ["relating to a city", "relating to a village", "relating to the countryside"],
+          "answer": "relating to a city"
+        },
+        {
+          "question": "What is a 'biography'?",
+          "options": ["a book about someone's life", "a book about science", "a book about cooking"],
+          "answer": "a book about someone's life"
+        }
+      ]
+    }
+  ],
+  "B2": [
+
+    {
+      "type": "GRAMMAR",
+      "questions": [
+        {
+          "question": "Which sentence uses the past perfect continuous tense?",
+          "options": ["I had been working all day.", "I worked all day.", "I was working all day."],
+          "answer": "I had been working all day."
+        },
+        {
+          "question": "Which sentence is in the passive voice?",
+          "options": ["The cake was eaten by the children.", "The children are eating the cake.", "The children ate the cake."],
+          "answer": "The cake was eaten by the children."
+        },
+        {
+          "question": "What is the correct form of 'to have' in the future perfect tense?",
+          "options": ["will have had", "will has had", "will had"],
+          "answer": "will have had"
+        },
+        {
+          "question": "Which of these is a correct second conditional sentence?",
+          "options": ["If I won the lottery, I would buy a house.", "If I win the lottery, I buy a house.", "If I won the lottery, I buy a house."],
+          "answer": "If I won the lottery, I would buy a house."
+        },
+        {
+          "question": "Which sentence correctly uses a modal verb?",
+          "options": ["She can speak three languages.", "She could speaks three languages.", "She cans speak three languages."],
+          "answer": "She can speak three languages."
+        },
+        {
+          "question": "Which sentence uses the correct comparative form?",
+          "options": ["She is more smarter than him.", "She is smarter than him.", "She is most smarter than him."],
+          "answer": "She is smarter than him."
+        },
+        {
+          "question": "What is the correct form of 'to be' in the present perfect continuous tense?",
+          "options": ["has been being", "has been", "is being"],
+          "answer": "has been"
+        },
+        {
+          "question": "Which of these sentences uses an infinitive?",
+          "options": ["I want to learn Spanish.", "I learning Spanish.", "I learned Spanish."],
+          "answer": "I want to learn Spanish."
+        },
+        {
+          "question": "Which sentence uses the correct form of a phrasal verb?",
+          "options": ["She looked up the word in the dictionary.", "She looked the word up in the dictionary.", "She looked the word in the dictionary up."],
+          "answer": "She looked up the word in the dictionary."
+        },
+        {
+          "question": "Which sentence correctly uses a relative clause?",
+          "options": ["The man who lives next door is a doctor.", "The man lives next door who is a doctor.", "The man which lives next door is a doctor."],
+          "answer": "The man who lives next door is a doctor."
+        }
+      ]
+    },
+    {
+      "type": "VOCABULARY",
+      "questions": [
+        {
+          "question": "What is the synonym of 'benevolent'?",
+          "options": ["kind", "cruel", "indifferent"],
+          "answer": "kind"
+        },
+        {
+          "question": "What is the antonym of 'explicit'?",
+          "options": ["vague", "clear", "detailed"],
+          "answer": "vague"
+        },
+        {
+          "question": "What does 'ubiquitous' mean?",
+          "options": ["everywhere", "rare", "occasional"],
+          "answer": "everywhere"
+        },
+        {
+          "question": "Which word means 'a strong desire to do something'?",
+          "options": ["urge", "hesitation", "disinterest"],
+          "answer": "urge"
+        },
+        {
+          "question": "What is a 'connoisseur'?",
+          "options": ["an expert judge in matters of taste", "a beginner", "an average person"],
+          "answer": "an expert judge in matters of taste"
+        },
+        {
+          "question": "What is the synonym of 'meticulous'?",
+          "options": ["careful", "careless", "quick"],
+          "answer": "careful"
+        },
+        {
+          "question": "What does 'incessant' mean?",
+          "options": ["constant", "intermittent", "rare"],
+          "answer": "constant"
+        },
+        {
+          "question": "What is the antonym of 'augment'?",
+          "options": ["diminish", "increase", "expand"],
+          "answer": "diminish"
+        },
+        {
+          "question": "What does 'elucidate' mean?",
+          "options": ["clarify", "confuse", "obscure"],
+          "answer": "clarify"
+        },
+        {
+          "question": "What is a 'charlatan'?",
+          "options": ["a fraud", "a hero", "a scholar"],
+          "answer": "a fraud"
+        }
+      ]
+    }
+
+  ],
+  "C1": [
+    {
+      "type": "GRAMMAR",
+      "questions": [
+        {
+          "question": "Which sentence correctly uses a subjunctive form?",
+          "options": ["I wish he were here.", "I wish he was here.", "I wish he is here."],
+          "answer": "I wish he were here."
+        },
+        {
+          "question": "Which sentence uses a third conditional structure?",
+          "options": ["If I had known, I would have called you.", "If I knew, I would call you.", "If I know, I will call you."],
+          "answer": "If I had known, I would have called you."
+        },
+        {
+          "question": "Which sentence correctly uses a causative verb?",
+          "options": ["I had my car repaired.", "I have my car repairing.", "I has my car repaired."],
+          "answer": "I had my car repaired."
+        },
+        {
+          "question": "Which sentence is in the correct form of reported speech?",
+          "options": ["She said that she was going to the market.", "She says that she was going to the market.", "She said that she is going to the market."],
+          "answer": "She said that she was going to the market."
+        },
+        {
+          "question": "Which sentence uses an appropriate inversion after a negative adverbial?",
+          "options": ["Rarely do we see such talent.", "Rarely we do see such talent.", "Rarely does we see such talent."],
+          "answer": "Rarely do we see such talent."
+        },
+        {
+          "question": "Which sentence correctly uses a future perfect continuous tense?",
+          "options": ["By next year, I will have been working here for five years.", "By next year, I will have worked here for five years.", "By next year, I will be working here for five years."],
+          "answer": "By next year, I will have been working here for five years."
+        },
+        {
+          "question": "Which sentence correctly uses an adverbial clause of concession?",
+          "options": ["Although it was raining, they went for a walk.", "Although it was raining, but they went for a walk.", "Although it was raining, yet they went for a walk."],
+          "answer": "Although it was raining, they went for a walk."
+        },
+        {
+          "question": "Which sentence uses the correct form of a mixed conditional?",
+          "options": ["If I had studied harder, I would be successful now.", "If I had studied harder, I will be successful now.", "If I studied harder, I would have been successful now."],
+          "answer": "If I had studied harder, I would be successful now."
+        },
+        {
+          "question": "Which sentence correctly uses a semi-modal verb?",
+          "options": ["She dared not to speak.", "She dare not speak.", "She dares not to speak."],
+          "answer": "She dare not speak."
+        },
+        {
+          "question": "Which sentence uses a correct gerund or infinitive form?",
+          "options": ["I regret telling her the truth.", "I regret to tell her the truth.", "I regret tell her the truth."],
+          "answer": "I regret telling her the truth."
+        }
+      ]
+    },
+    {
+      "type": "VOCABULARY",
+      "questions": [
+        {
+          "question": "What does 'ephemeral' mean?",
+          "options": ["short-lived", "permanent", "enduring"],
+          "answer": "short-lived"
+        },
+        {
+          "question": "What is the synonym of 'ubiquitous'?",
+          "options": ["everywhere", "scarce", "hidden"],
+          "answer": "everywhere"
+        },
+        {
+          "question": "What is the antonym of 'ameliorate'?",
+          "options": ["worsen", "improve", "enhance"],
+          "answer": "worsen"
+        },
+        {
+          "question": "What does 'ostracize' mean?",
+          "options": ["exclude", "welcome", "include"],
+          "answer": "exclude"
+        },
+        {
+          "question": "What is the synonym of 'fluctuate'?",
+          "options": ["vary", "steady", "persist"],
+          "answer": "vary"
+        },
+        {
+          "question": "What is the antonym of 'tedious'?",
+          "options": ["exciting", "boring", "monotonous"],
+          "answer": "exciting"
+        },
+        {
+          "question": "What does 'meticulous' mean?",
+          "options": ["careful", "careless", "hasty"],
+          "answer": "careful"
+        },
+        {
+          "question": "What is the synonym of 'cogent'?",
+          "options": ["convincing", "weak", "ineffective"],
+          "answer": "convincing"
+        },
+        {
+          "question": "What does 'altruism' mean?",
+          "options": ["selflessness", "selfishness", "greed"],
+          "answer": "selflessness"
+        },
+        {
+          "question": "What is the antonym of 'diminish'?",
+          "options": ["increase", "decrease", "reduce"],
+          "answer": "increase"
+        }
+      ]
+    }
+  ],
+  "C2": [
+    {
+      "type": "GRAMMAR",
+      "questions": [
+        {
+          "question": "Which sentence correctly uses a cleft structure?",
+          "options": ["It was John who called.", "John was who called.", "Who called was John."],
+          "answer": "It was John who called."
+        },
+        {
+          "question": "Which sentence correctly uses an inversion for emphasis?",
+          "options": ["Never have I seen such beauty.", "Never I have seen such beauty.", "Never I seen such beauty."],
+          "answer": "Never have I seen such beauty."
+        },
+        {
+          "question": "Which sentence correctly uses a future perfect passive tense?",
+          "options": ["The work will have been completed by next month.", "The work will have been completing by next month.", "The work will have been complete by next month."],
+          "answer": "The work will have been completed by next month."
+        },
+        {
+          "question": "Which sentence correctly uses a perfect participle?",
+          "options": ["Having finished the project, he went to bed.", "Having finish the project, he went to bed.", "Having finished the project, he goes to bed."],
+          "answer": "Having finished the project, he went to bed."
+        },
+        {
+          "question": "Which sentence correctly uses a reduced relative clause?",
+          "options": ["The man standing there is my uncle.", "The man who standing there is my uncle.", "The man who is standing there is my uncle."],
+          "answer": "The man standing there is my uncle."
+        },
+        {
+          "question": "Which sentence correctly uses a mixed conditional?",
+          "options": ["If I had won the lottery, I would be rich now.", "If I had won the lottery, I would have been rich now.", "If I win the lottery, I would have been rich now."],
+          "answer": "If I had won the lottery, I would be rich now."
+        },
+        {
+          "question": "Which sentence correctly uses a passive causative?",
+          "options": ["I got my hair cut.", "I got cut my hair.", "I got my hair cutting."],
+          "answer": "I got my hair cut."
+        },
+        {
+          "question": "Which sentence correctly uses a nominal clause?",
+          "options": ["What she said was surprising.", "What she said were surprising.", "What she says was surprising."],
+          "answer": "What she said was surprising."
+        },
+        {
+          "question": "Which sentence correctly uses an adverbial clause of time?",
+          "options": ["As soon as he arrived, the meeting started.", "As soon he arrived, the meeting started.", "As soon as he arrives, the meeting started."],
+          "answer": "As soon as he arrived, the meeting started."
+        },
+        {
+          "question": "Which sentence correctly uses a gerund after a preposition?",
+          "options": ["She is interested in learning French.", "She is interested to learning French.", "She is interested for learning French."],
+          "answer": "She is interested in learning French."
+        }
+      ]
+    },
+    {
+      "type": "VOCABULARY",
+      "questions": [
+        {
+          "question": "What does 'obfuscate' mean?",
+          "options": ["confuse", "clarify", "simplify"],
+          "answer": "confuse"
+        },
+        {
+          "question": "What is the synonym of 'ubiquitous'?",
+          "options": ["omnipresent", "rare", "hidden"],
+          "answer": "omnipresent"
+        },
+        {
+          "question": "What is the antonym of 'ephemeral'?",
+          "options": ["lasting", "brief", "transient"],
+          "answer": "lasting"
+        },
+        {
+          "question": "What does 'parsimonious' mean?",
+          "options": ["stingy", "generous", "extravagant"],
+          "answer": "stingy"
+        },
+        {
+          "question": "What is the synonym of 'cogent'?",
+          "options": ["convincing", "unconvincing", "irrelevant"],
+          "answer": "convincing"
+        },
+        {
+          "question": "What is the antonym of 'pugnacious'?",
+          "options": ["peaceful", "aggressive", "belligerent"],
+          "answer": "peaceful"
+        },
+        {
+          "question": "What does 'prolific' mean?",
+          "options": ["productive", "unproductive", "scarce"],
+          "answer": "productive"
+        },
+        {
+          "question": "What is the synonym of 'aberration'?",
+          "options": ["anomaly", "normality", "conformity"],
+          "answer": "anomaly"
+        },
+        {
+          "question": "What does 'vindicate' mean?",
+          "options": ["justify", "accuse", "blame"],
+          "answer": "justify"
+        },
+        {
+          "question": "What is the antonym of 'veracity'?",
+          "options": ["falsehood", "truthfulness", "honesty"],
+          "answer": "falsehood"
+        }
+      ]
+    }
+  ]
+
+}

@@ -1,0 +1,52 @@
+Sentence structure refers to the organization of words and phrases to create grammatically correct and meaningful sentences. In English, sentences typically follow a specific structure, which can vary based on the type of sentence being used. Here's a comprehensive overview:
+
+
+1. Basic Sentence Structure**:
+   - Subject: The subject of a sentence is the person, thing, or idea that performs the action or is described by the verb. It answers the question "who" or "what" the sentence is about.
+   - Verb: The verb expresses the action or state of being in the sentence. It indicates what the subject is doing or the condition it's in.
+   - Object: The object of a sentence is the person or thing affected by the action of the verb. It answers the question "whom" or "what" after the verb.
+
+
+   Example:
+   - Subject (S): The cat
+   - Verb (V): chased
+   - Object (O): the mouse
+   - Sentence: The cat chased the mouse.
+
+
+2. Types of Sentence:
+   - Simple Sentence: Contains one independent clause with a subject and a verb.
+     - Example: She sings.
+   - Compound Sentence: Contains two or more independent clauses joined by a coordinating conjunction or semicolon.
+     - Example: She sings, and he dances.
+   - Complex Sentence: Contains one independent clause and one or more dependent clauses joined by subordinating conjunctions.
+     - Example: Because she sings well, she won the competition.
+   - Compound-Complex Sentence: Contains two or more independent clauses and one or more dependent clauses.
+     - Example: She sings well, and she won the competition because she practiced hard.
+
+
+3. Modifiers:
+   - Adjectives: Modify nouns or pronouns to provide more information about their qualities.
+     - Example: The blue car is fast.
+   - Adverbs: Modify verbs, adjectives, or other adverbs to provide more information about manner, time, place, etc.
+     - Example: He ran quickly to catch the bus.
+
+
+4. Phrases and Clauses**:
+   - Phrase: A group of words that functions as a single unit within a sentence but does not contain both a subject and a verb.
+     - Example: In the morning, I like to read.
+   - Clause: A group of words containing a subject and a verb. Clauses can be independent (can stand alone as a sentence) or dependent (cannot stand alone).
+     - Example of an independent clause: I like to read.
+     - Example of a dependent clause: When I have free time, I like to read.
+
+
+5. Sentence Patterns:
+   - Subject-Verb (SV): The simplest sentence pattern consisting of a subject and a verb.
+     - Example: Dogs bark.
+   - Subject-Verb-Object (SVO): A common sentence pattern where a subject performs an action on an object.
+     - Example: She reads books.
+   - Subject-Verb-Adjective (SVA): A sentence pattern where an adjective modifies the subject.
+     - Example: She is happy.
+   - Subject-Verb-Adverb (SAdv): A sentence pattern where an adverb modifies the verb.
+     - Example: She reads quickly.
+

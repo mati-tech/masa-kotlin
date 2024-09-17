@@ -1,3 +1,308 @@
 <resources>
-    <string name="app_name">masa_english_learning</string>
+    <string name="app_name">MASA_English_School</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register_text">New to the system? Click to register!</string>
+    <string name="aboutme">Hey there! I\'m Mati, the mastermind behind this app. \nIf you encounter any bugs, just blame them on the squirrels playing with my code! 🐿️👨‍💻</string>
+
+    <string-array name="Everyday_act">
+        <item>Hello -------- привет</item>
+        <item>Goodbye -------- до свидания</item>
+        <item>Thank you -------- спасибо</item>
+        <item>Please -------- пожалуйста</item>
+        <item>Yes -------- да</item>
+        <item>No -------- нет</item>
+        <item>Excuse me -------- извините</item>
+        <item>Sorry -------- простите</item>
+        <item>How are you? -------- Как дела?</item>
+        <item>I\'m fine, thank you -------- Хорошо спасибо</item>
+        <item>What\'s your name? -------- Как вас зовут?</item>
+        <item>My name is... -------- Меня зовут...</item>
+        <item>Where are you from? -------- Откуда вы?</item>
+        <item>I\'m from... -------- Я из...</item>
+        <item>How old are you? -------- Сколько вам лет?</item>
+        <item>I\'m ... years old -------- Мне ... лет</item>
+        <item>What time is it? -------- Который час?</item>
+        <item>It\'s … o\'clock -------- Сейчас ... часов</item>
+        <item>Where is the bathroom? -------- Где туалет?</item>
+        <item>Can you help me? -------- Вы можете мне помочь?</item>
+    </string-array>
+    <string-array name="fooddrink">
+        <item>Water -------- вода</item>
+        <item>Bread -------- хлеб</item>
+        <item>Milk -------- молоко</item>
+        <item>Coffee -------- кофе</item>
+        <item>Tea -------- чай</item>
+        <item>Apple -------- яблоко</item>
+        <item>Orange -------- апельсин</item>
+        <item>Banana -------- банан</item>
+        <item>Strawberry -------- клубника</item>
+        <item>Cake -------- торт</item>
+        <item>Pizza -------- пицца</item>
+        <item>Pasta -------- паста</item>
+        <item>Fish -------- рыба</item>
+        <item>Meat -------- мясо</item>
+        <item>Vegetable -------- овощ</item>
+        <item>Fruit -------- фрукт</item>
+        <item>Juice -------- сок</item>
+        <item>Beer -------- пиво</item>
+        <item>Wine -------- вино</item>
+        <item>Watermelon -------- арбуз</item>
+    </string-array>
+    <string-array name="traveltrans">
+        <item>Car -------- машина</item>
+        <item>Bus -------- автобус</item>
+        <item>Train -------- поезд</item>
+        <item>Plane -------- самолет</item>
+        <item>Bicycle -------- велосипед</item>
+        <item>Metro -------- метро</item>
+        <item>Taxi -------- такси</item>
+        <item>Boat -------- лодка</item>
+        <item>Ship -------- корабль</item>
+        <item>Motorcycle -------- мотоцикл</item>
+        <item>Scooter -------- скутер</item>
+        <item>Tram -------- трамвай</item>
+        <item>Helicopter -------- вертолет</item>
+        <item>Subway -------- метро</item>
+        <item>Airport -------- аэропорт</item>
+        <item>Port -------- порт</item>
+        <item>Highway -------- шоссе</item>
+        <item>Bridge -------- мост</item>
+        <item>Station -------- станция</item>
+        <item>Terminal -------- терминал</item>
+    </string-array>
+    <string-array name="workbusiness">
+        <item>Job -------- работа</item>
+        <item>Company -------- компания</item>
+        <item>Employee -------- сотрудник</item>
+        <item>Employer -------- работодатель</item>
+        <item>Office -------- офис</item>
+        <item>Meeting -------- встреча</item>
+        <item>Business trip -------- командировка</item>
+        <item>Manager -------- менеджер</item>
+        <item>Colleague -------- коллега</item>
+        <item>Client -------- клиент</item>
+        <item>Project -------- проект</item>
+        <item>Deadline -------- крайний срок</item>
+        <item>Income -------- доход</item>
+        <item>Expenses -------- расходы</item>
+        <item>Profit -------- прибыль</item>
+        <item>Loss -------- убыток</item>
+        <item>Salary -------- зарплата</item>
+        <item>Budget -------- бюджет</item>
+        <item>Investment -------- инвестиция</item>
+        <item>Resume -------- резюме</item>
+    </string-array>
+    <string-array name="educationlearning">
+        <item>School -------- школа</item>
+        <item>Student -------- студент</item>
+        <item>Teacher -------- учитель</item>
+        <item>Classroom -------- класс</item>
+        <item>Homework -------- домашнее задание</item>
+        <item>Lesson -------- урок</item>
+        <item>Exam -------- экзамен</item>
+        <item>Grade -------- оценка</item>
+        <item>Book -------- книга</item>
+        <item>Library -------- библиотека</item>
+        <item>University -------- университет</item>
+        <item>College -------- колледж</item>
+        <item>Degree -------- степень</item>
+        <item>Study -------- учеба</item>
+        <item>Test -------- тест</item>
+        <item>Subject -------- предмет</item>
+        <item>Board -------- доска</item>
+        <item>Pen -------- ручка</item>
+        <item>Pencil -------- карандаш</item>
+        <item>Backpack -------- рюкзак</item>
+    </string-array>
+    <string-array name="healthfitness">
+        <item>Health -------- здоровье</item>
+        <item>Doctor -------- врач</item>
+        <item>Hospital -------- больница</item>
+        <item>Medicine -------- медицина</item>
+        <item>Pill -------- таблетка</item>
+        <item>Sick -------- больной</item>
+        <item>Healthy -------- здоровый</item>
+        <item>Nurse -------- медсестра</item>
+        <item>Pharmacy -------- аптека</item>
+        <item>Appointment -------- прием</item>
+        <item>Illness -------- болезнь</item>
+        <item>Injury -------- травма</item>
+        <item>Exercise -------- упражнение</item>
+        <item>Sport -------- спорт</item>
+    </string-array>
+    <string-array name="shoppingfashion">
+        <item>Shop -------- магазин</item>
+        <item>Buy -------- покупать</item>
+        <item>Sell -------- продавать</item>
+        <item>Price -------- цена</item>
+        <item>Discount -------- скидка</item>
+        <item>Payment -------- оплата</item>
+        <item>Change -------- сдача</item>
+        <item>Receipt -------- чек</item>
+        <item>Bag -------- сумка</item>
+        <item>Clothes -------- одежда</item>
+        <item>Shoes -------- обувь</item>
+        <item>Jewelry -------- украшения</item>
+        <item>Watch -------- часы</item>
+        <item>Dress -------- платье</item>
+        <item>Shirt -------- рубашка</item>
+        <item>Pants -------- брюки</item>
+        <item>Skirt -------- юбка</item>
+        <item>Suit -------- костюм</item>
+        <item>Hat -------- шляпа</item>
+        <item>Glasses -------- очки</item>
+    </string-array>
+    <string-array name="natureenvironment">
+        <item>Nature -------- природа</item>
+        <item>Tree -------- дерево</item>
+        <item>Flower -------- цветок</item>
+        <item>Forest -------- лес</item>
+        <item>Mountain -------- гора</item>
+        <item>Beach -------- пляж</item>
+        <item>Lake -------- озеро</item>
+        <item>River -------- река</item>
+        <item>Ocean -------- океан</item>
+        <item>Sea -------- море</item>
+        <item>Sky -------- небо</item>
+        <item>Cloud -------- облако</item>
+        <item>Sun -------- солнце</item>
+        <item>Moon -------- луна</item>
+        <item>Star -------- звезда</item>
+        <item>Weather -------- погода</item>
+        <item>Climate -------- климат</item>
+        <item>Rain -------- дождь</item>
+        <item>Snow -------- снег</item>
+        <item>Wind -------- ветер</item>
+    </string-array>
+    <string-array name="entertainmentmedia">
+        <item>Movie -------- фильм</item>
+        <item>Television -------- телевидение</item>
+        <item>Music -------- музыка</item>
+        <item>Song -------- песня</item>
+        <item>Artist -------- артист</item>
+        <item>Actor -------- актер</item>
+        <item>Actress -------- актриса</item>
+        <item>Dancer -------- танцор</item>
+        <item>Concert -------- концерт</item>
+        <item>Theater -------- театр</item>
+        <item>Performance -------- выступление</item>
+        <item>Game -------- игра</item>
+        <item>Video -------- видео</item>
+        <item>Photography -------- фотография</item>
+        <item>Camera -------- камера</item>
+        <item>Art -------- искусство</item>
+        <item>Book -------- книга</item>
+        <item>Magazine -------- журнал</item>
+        <item>Newspaper -------- газета</item>
+        <item>Internet -------- интернет</item>
+    </string-array>
+
+    <string-array name="peoplerelationships">
+
+        <item>Person -------- человек</item>
+        <item>Man -------- мужчина</item>
+        <item>Woman -------- женщина</item>
+        <item>Friend -------- друг</item>
+        <item>Family -------- семья</item>
+        <item>Brother -------- брат</item>
+        <item>Sister -------- сестра</item>
+        <item>Parent -------- родитель</item>
+        <item>Mother -------- мать</item>
+        <item>Father -------- отец</item>
+        <item>Child -------- ребенок</item>
+        <item>Son -------- сын</item>
+        <item>Daughter -------- дочь</item>
+        <item>Grandparent -------- бабушка/дедушка</item>
+        <item>Grandmother -------- бабушка</item>
+        <item>Grandfather -------- дедушка</item>
+        <item>Grandchild -------- внук/внучка</item>
+        <item>Boyfriend -------- парень</item>
+        <item>Girlfriend -------- девушка</item>
+        <item>Love -------- любовь</item>
+    </string-array>
+    <string-array name="placesbuildings">
+        <item>Place -------- место</item>
+        <item>Building -------- здание</item>
+        <item>House -------- дом</item>
+        <item>Apartment -------- квартира</item>
+        <item>Room -------- комната</item>
+        <item>Bedroom -------- спальня</item>
+        <item>Bathroom -------- ванная</item>
+        <item>Kitchen -------- кухня</item>
+        <item>Living Room -------- гостиная</item>
+        <item>Dining Room -------- столовая</item>
+        <item>Office -------- офис</item>
+        <item>School -------- школа</item>
+        <item>University -------- университет</item>
+        <item>Library -------- библиотека</item>
+        <item>Hospital -------- больница</item>
+        <item>Bank -------- банк</item>
+        <item>Restaurant -------- ресторан</item>
+        <item>Store -------- магазин</item>
+        <item>Market -------- рынок</item>
+        <item>Theater -------- театр</item>
+    </string-array>
+    <string-array name="sportsgames">
+        <item>Sport -------- спорт</item>
+        <item>Game -------- игра</item>
+        <item>Football -------- футбол</item>
+        <item>Basketball -------- баскетбол</item>
+        <item>Tennis -------- теннис</item>
+        <item>Volleyball -------- волейбол</item>
+        <item>Golf -------- гольф</item>
+        <item>Baseball -------- бейсбол</item>
+        <item>Hockey -------- хоккей</item>
+        <item>Rugby -------- регби</item>
+        <item>Swimming -------- плавание</item>
+        <item>Running -------- бег</item>
+        <item>Cycling -------- велоспорт</item>
+        <item>Boxing -------- бокс</item>
+        <item>Chess -------- шахматы</item>
+        <item>Video Game -------- видеоигра</item>
+        <item>Computer Game -------- компьютерная игра</item>
+        <item>Board Game -------- настольная игра</item>
+        <item>Card Game -------- карточная игра</item>
+        <item>Puzzle -------- головоломка</item>
+    </string-array>
+    <string-array name="technologygadgets">
+        <item>Technology -------- технологии</item>
+        <item>Gadget -------- гаджет</item>
+        <item>Computer -------- компьютер</item>
+        <item>Laptop -------- ноутбук</item>
+        <item>Smartphone -------- смартфон</item>
+        <item>Tablet -------- планшет</item>
+        <item>Smartwatch -------- умные часы</item>
+        <item>Headphones -------- наушники</item>
+        <item>Speaker -------- колонка</item>
+        <item>Camera -------- камера</item>
+        <item>Television -------- телевизор</item>
+        <item>Remote Control -------- пульт</item>
+        <item>Keyboard -------- клавиатура</item>
+        <item>Mouse -------- мышь</item>
+        <item>Printer -------- принтер</item>
+        <item>Scanner -------- сканер</item>
+        <item>Router -------- роутер</item>
+        <item>Smart Home -------- умный дом</item>
+        <item>Virtual Reality -------- виртуальная реальность</item>
+        <item>Artificial Intelligence -------- искусственный интеллект</item>
+    </string-array>
+
+
 </resources>

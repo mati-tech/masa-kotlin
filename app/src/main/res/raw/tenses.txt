@@ -1,0 +1,62 @@
+In English, there are 12 basic tenses, which are formed using different combinations of auxiliary verbs (also known as helping verbs) and main verbs. These tenses are divided into three main categories: simple, continuous (progressive), and perfect. Here's an overview of each tense:
+
+
+1. Simple Present Tense:
+   - Form: Subject + Base Form of Verb (+ Object)
+   - Example: She reads books every day.
+
+
+2. Present Continuous Tense:
+   - Form: Subject + "to be" (am/is/are) + Present Participle (-ing form of verb) (+ Object)
+   - Example: She is reading** a book right now.
+
+
+3. Present Perfect Tense:
+   - Form: Subject + "to have" (have/has) + Past Participle of Verb (+ Object)
+   - Example: She has read many books this year.
+
+
+4. Present Perfect Continuous Tense:
+   - Form: Subject + "to have" (have/has) + Been + Present Participle (-ing form of verb) (+ Object)
+   - Example: She has been reading for two hours.
+
+
+5. Simple Past Tense:
+   - Form: Subject + Past Form of Verb (+ Object)
+   - Example: She read a book yesterday.
+
+
+6. Past Continuous Tense:
+   - Form: Subject + "to be" (was/were) + Present Participle (-ing form of verb) (+ Object)
+   - Example: She was reading a book when the phone rang.
+
+
+7. Past Perfect Tense:
+   - Form: Subject + "to have" (had) + Past Participle of Verb (+ Object)
+   - Example: She **had read** all the books before the exam started.
+
+
+8. Past Perfect Continuous Tense:
+   - Form: Subject + "to have" (had) + Been + Present Participle (-ing form of verb) (+ Object)
+   - Example: She had been reading for hours when I arrived.
+
+
+9. Simple Future Tense:
+   - Form: Subject + "will" or "shall" + Base Form of Verb (+ Object)
+   - Example: She will read a book tomorrow.
+
+
+10. Future Continuous Tense:
+    - Form: Subject + "will be" + Present Participle (-ing form of verb) (+ Object)
+    - Example: She will be reading** a book at this time tomorrow.
+
+
+11. Future Perfect Tense:
+    - Form: Subject + "will have" + Past Participle of Verb (+ Object)
+    - Example: She **will have read** all the books by next week.
+
+
+12. Future Perfect Continuous Tense:
+    - Form: Subject + "will have been" + Present Participle (-ing form of verb) (+ Object)
+    - Example: She will have been reading for three hours by the time you arrive.
+

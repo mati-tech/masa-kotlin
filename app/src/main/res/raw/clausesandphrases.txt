@@ -1,0 +1,30 @@
+1. Phrases:
+   - Definition: A phrase is a group of words that functions as a single unit within a sentence but does not contain both a subject and a verb. Phrases can act as nouns, verbs, adjectives, adverbs, or prepositions.
+   - Types of Phrases:
+     - Noun Phrase: Functions as a noun in a sentence and consists of a noun and any modifiers.
+       - Example: The big red apple** fell from the tree.
+     - Verb Phrase: Consists of a main verb and any auxiliary verbs or modifiers.
+       - Example: She will have been studying for hours.
+     - Adjective Phrase: Acts as an adjective and modifies a noun or pronoun.
+       - Example: The house with the blue shutters is for sale.
+     - Adverbial Phras**: Acts as an adverb and modifies a verb, adjective, or adverb.
+       - Example: They walked along the beach.
+     - Prepositional Phrase: Begins with a preposition and includes the object of the preposition and any modifiers.
+       - Example: She sat under the tree.
+   - Functions: Phrases add detail and specificity to sentences by providing additional information about nouns, verbs, adjectives, adverbs, or prepositions.
+
+
+2. Clauses:
+   - Definition: A clause is a group of words that contains both a subject and a predicate (verb). Clauses can be independent (can stand alone as a sentence) or dependent (cannot stand alone).
+   - Types of Clauses:
+     - Independent Clause: Expresses a complete thought and can stand alone as a sentence.
+       - Example: She sings beautifully.
+     - Dependent Clause (Subordinate Clause): Does not express a complete thought and depends on an independent clause to form a complete sentence.
+       - Adjective Clause (Relative Clause): Modifies a noun or pronoun in the independent clause.
+         - Example: The book **that she is reading is interesting.
+       - Adverb Clause: Modifies a verb, adjective, or adverb in the independent clause.
+         - Example: She left because she was tired.
+       - Noun Clause: Functions as a noun in the sentence.
+         - Example: What she said** surprised me.
+   - Functions: Clauses add complexity and depth to sentences by providing additional information and relationships between ideas. They can express time, cause and effect, condition, contrast, and other relationships.
+
