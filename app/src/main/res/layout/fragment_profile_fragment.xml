@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/cus6"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.fragments_drawer.profile_fragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginBottom="40dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:backgroundTint="@color/cus5"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/masa_logo" />
+
+            <TextView
+                android:id="@+id/Masa_name"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:textSize="20dp"
+                android:textColor="@color/cus5"
+                android:gravity="center_horizontal"
+                android:text="Masa English Academy" />
+
+            <TextView
+                android:id="@+id/frag_profile_info_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+
+                android:textColor="@color/cus5"
+                android:textSize="15sp"
+                android:layout_marginBottom="15dp"
+                android:text="Profile Information" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                app:cardCornerRadius="15dp"
+                android:layout_margin="10dp"
+                android:background="@color/cus5"
+                android:backgroundTint="@color/cus5"
+                app:cardElevation="8dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cus5"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name_view"
+                        android:layout_width="match_parent"
+                        android:textStyle="bold|italic"
+                        android:layout_margin="15dp"
+                        android:background="@color/cus5"
+
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:text="Name" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/cus6"
+                        >
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/lastname_view"
+                        android:layout_width="match_parent"
+                        android:textStyle="bold|italic"
+                        android:background="@color/cus5"
+                        android:textColor="@color/white"
+                        android:layout_margin="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="lastname" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/cus6"
+                        >
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/age_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cus5"
+                        android:textColor="@color/white"
+                        android:textStyle="bold|italic"
+                        android:layout_margin="15dp"
+                        android:text="Age" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/cus6"
+                        >
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/email_view"
+                        android:layout_width="match_parent"
+                        android:layout_margin="15dp"
+                        android:textStyle="bold|italic"
+                        android:background="@color/cus5"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:text="Email" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/cus6"
+                        >
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/role_view"
+                        android:layout_width="match_parent"
+                        android:textStyle="bold|italic"
+                        android:layout_margin="15dp"
+                        android:background="@color/cus5"
+                        android:textColor="@color/white"
+                        android:fontFamily="monospace"
+                        android:layout_height="wrap_content"
+                        android:text="Role" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/cus6"
+                        >
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/englishlevel_view"
+                        android:layout_width="match_parent"
+                        android:layout_margin="15dp"
+                        android:background="@color/cus5"
+                        android:textColor="@color/white"
+                        android:textStyle="bold|italic"
+                        android:layout_height="wrap_content"
+                        android:text="English level" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/cus6"
+                        >
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/subject_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cus5"
+                        android:textColor="@color/white"
+                        android:layout_margin="15dp"
+                        android:textStyle="bold|italic"
+                        android:text="Subject"
+                        />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/frag_profile_complete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner_button"
+                android:layout_marginLeft="20dp"
+                android:text="Complete Profile" />
+
+            <ImageButton
+                android:layout_width="30dp"
+
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/logout"
+                android:layout_marginBottom="10dp"
+
+                android:background="@drawable/rounded_corner_button"
+                android:id="@+id/frag_profile_sign_out_button"
+                android:layout_height="30dp">
+
+            </ImageButton>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

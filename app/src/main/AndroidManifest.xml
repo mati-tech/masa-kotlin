@@ -24,6 +24,40 @@
         android:theme="@style/Theme.MASA_English_School"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activities.addMaterialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.vocabulary.vocabDetail"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.studymore.studyMore"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.grammer.grammerDetail"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.english_test.vocabTest"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.english_test.testDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.english_test.grammerTest"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.english_test.englishTestType"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.english_test.english_test_levels"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.dashboards.Teacherdashboard"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.dashboards.Studentdashboard"
+            android:exported="false"
+            android:theme="@style/Theme.MASA_English_School" />
+        <activity
             android:name=".ui.activities.authorization.completeProfileActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.fragments_drawer.aboutus_fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:paddingBottom="30dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:paddingBottom="30dp"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:backgroundTint="#F6F3E9"
+                android:padding="20dp"
+                app:cardCornerRadius="20dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:src="@mipmap/masa_round"
+                        android:layout_height="75dp">
+
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold|italic"
+
+                        android:fontFamily="monospace"
+                        android:text="MASA ENGLISH LANGUAGE SCHOOL" />
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvIntro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#F6F3E9"
+                    android:gravity="center_horizontal"
+
+
+                    android:background="#F6F3E9"
+                    android:padding="10dp"
+                    android:text="Welcome to MASA English Language Center. We are dedicated to providing top-notch English language education to help you achieve your communication goals."
+
+                    android:paddingBottom="16dp"/>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Social Media Section -->
+            <TextView
+                android:id="@+id/tvFollowUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Follow Us"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start">
+
+                <ImageView
+                    android:id="@+id/ivInstagram"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ig_black"
+                    android:contentDescription=""
+                    android:padding="8dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvInstagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:autoLink="web"
+                    android:text="https://www.instagram.com/mati.aziz2"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start">
+
+                <ImageView
+                    android:id="@+id/ivVK"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/vk_logo"
+
+                    android:padding="8dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvVK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://vk.com/azizmati"
+                    android:clickable="true"
+                    android:autoLink="web"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start">
+
+                <ImageView
+                    android:id="@+id/tg_id"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/telegram_logo"
+
+                    android:padding="8dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:id="@+id/tg_id_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://t.me/mati_aziz"
+                    android:clickable="true"
+                    android:textSize="16sp"
+
+                    android:autoLink="web"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+
+            <!-- Developer Info Section -->
+            <TextView
+                android:id="@+id/tvDeveloperInfoHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Developer Info"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvDeveloperInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="App developed by Matiullah Aziz. For more information, visit our website or contact us at azizmatiullah@yahoo.com"
+                android:textSize="16sp"
+                android:paddingBottom="16dp"/>
+
+            <!-- Contact Section -->
+            <TextView
+                android:id="@+id/tvContactUsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="For more information about our courses and services, feel free to contact us at azizmatiullah@yahoo.com or call us at +7 968 469 48 73."
+                android:textSize="16sp"
+                android:paddingBottom="16dp"/>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/mati_about_me" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="20dp"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:text="Thanks for using our services!\nAziz Matiullah"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+
+                    android:textStyle="bold|italic"
+                    android:background="#F6F3E9"
+                    >
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

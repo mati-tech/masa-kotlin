@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.fragments_navigations.vocabulary_fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cus6"
+        android:paddingBottom="40dp"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+
+            android:gravity="center"
+            android:paddingBottom="30dp"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/title_vocab"
+                    android:textStyle="bold|italic"
+                    android:fontFamily="monospace"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:background="@color/cus5"
+                    android:text="Main English Vocabulary" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/category_1_Everyday_act"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:background="#E1C55E"
+                android:text="Everyday Activities" />
+
+            <TextView
+                android:id="@+id/category_2_fooddrink"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="Food and Drink"
+                android:background="#BCF5A9"/>
+
+
+            <TextView
+                android:id="@+id/category_3_traveltrans"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:text="Travel and Transport"
+                android:background="#A9BCF5"  />
+
+            <TextView
+                android:id="@+id/category_4_workbusiness"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:layout_margin="10dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="Work and Business"
+                android:background="#F5D0A9"  />
+
+            <TextView
+                android:id="@+id/category_5_educationlearning"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:layout_margin="10dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="Education and Learning"
+                android:background="#A9BCF5"  />
+
+            <TextView
+                android:id="@+id/category_6_healthfitness"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:layout_margin="10dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="Health and Fitness"
+                android:background="#F5A9F2"  />
+
+            <TextView
+                android:id="@+id/category_7_shoppingfashion"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:layout_margin="10dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="Shopping and Fashion"
+                android:background="#A9F5F2"  />
+
+            <TextView
+                android:id="@+id/category_8_natureenvironment"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:layout_height="40dp"
+                android:text="Nature and Environment"
+                android:background="#D0A9F5"/>
+
+            <TextView
+                android:id="@+id/category_9_entertainmentmedia"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:layout_height="40dp"
+                android:text="Entertainment and Media"
+                android:background="#F5BCA9"  />
+
+            <TextView
+                android:id="@+id/category_10_peoplerelationships"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="People and Relationships"
+                android:background="#F5A9A9" />
+
+            <TextView
+                android:id="@+id/category_11_placesbuildings"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="Places and Buildings"
+                android:background="#F5F6CE" />
+
+            <TextView
+                android:id="@+id/category_12_sportsgames"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+
+                android:layout_margin="10dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="Sports and Games"
+                android:background="#A9BCF5" />
+
+            <TextView
+                android:id="@+id/category_13_technologygadgets"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="Technology and Gadgets"
+                android:background="#BCF5A9" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
+
+
+

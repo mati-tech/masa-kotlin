@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/english_level_activities"
+    android:layout_width="match_parent"
+    android:theme="@style/Theme.MASA_English_School_no_action_bar"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.english_test.english_test_levels">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/cus6"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/grammer_info"
+            android:textStyle="bold|italic"
+            android:fontFamily="monospace"
+            android:layout_margin="10dp"
+
+            android:gravity="center"
+            android:textColor="@color/white"
+
+            android:background="@color/cus5"
+            android:text="Select your English language" />
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:backgroundTint="#E1C55E"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/english_level_a1"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:gravity="center"
+                android:background="#E1C55E"
+                android:text="A1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:backgroundTint="#BCF5A9"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/english_level_a2"
+                android:layout_width="match_parent"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:text="A2"
+                android:background="#BCF5A9"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:backgroundTint="#A9BCF5"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/english_level_b1"
+                android:layout_width="match_parent"
+                android:textStyle="bold|italic"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:text="B1"
+                android:background="#A9BCF5"  />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:backgroundTint="#F5D0A9"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/english_level_b2"
+                android:layout_width="match_parent"
+                android:textStyle="bold|italic"
+                android:layout_margin="20dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:text="B2"
+                android:background="#F5D0A9"  />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:backgroundTint="#A9BCF5"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="20dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/english_level_c1"
+                android:layout_width="match_parent"
+                android:textStyle="bold|italic"
+                android:layout_margin="20dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:text="C1"
+                android:background="#A9BCF5"  />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:backgroundTint="#A9F5F2"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="20dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/english_level_c2"
+                android:layout_width="match_parent"
+                android:textStyle="bold|italic"
+                android:layout_margin="20dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:text="C2"
+                android:background="#A9F5F2"  />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

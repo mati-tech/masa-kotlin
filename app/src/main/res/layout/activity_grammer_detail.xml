@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cus6"
+    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+    tools:context=".ui.activities.grammer.grammerDetail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="monospace"
+            android:id="@+id/grammer_text_main"
+            android:textStyle="bold"
+            android:padding="20dp">
+        </TextView>
+
+    </ScrollView>
+
+
+</LinearLayout>
