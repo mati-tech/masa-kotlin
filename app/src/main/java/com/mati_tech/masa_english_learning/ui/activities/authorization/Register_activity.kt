@@ -1,4 +1,4 @@
-package com.mati_tech.masa_english_learning.ui.activities
+package com.mati_tech.masa_english_learning.ui.activities.authorization
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,11 +7,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.mati_tech.masa_english_learning.R
 
-class MainActivity : AppCompatActivity() {
+class Register_activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        setContentView(R.layout.activity_main)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_register_activity)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -19,5 +19,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-// TODO: add files from pervious version to this one  
