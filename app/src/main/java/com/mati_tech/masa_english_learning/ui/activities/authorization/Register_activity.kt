@@ -11,7 +11,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.mati_tech.masa_english_learning.R
-// TODO:  import com.example.masa_english_school.databaseHelper.DatabaseHelper
+import com.mati_tech.masa_english_learning.databaseHelper.DatabaseHelper
+// TODO:  import com.mati_tech.masa_english_learning.databaseHelper.DatabaseHelper
 import com.mati_tech.masa_english_learning.ui.activities.authorization.Login_activity
 
 class Register_activity : AppCompatActivity() {
@@ -76,7 +77,9 @@ class Register_activity : AppCompatActivity() {
     }
 
     private fun signupDatabase(username: String, password: String, role: String?) {
+
         val insertRowId: Long = databaseHelper.insertUser(username, password, role)
+
         if (insertRowId != -1L) {
             Toast.makeText(this, "Signup Successfull!", Toast.LENGTH_SHORT).show()
             val intent = Intent(
@@ -85,12 +88,16 @@ class Register_activity : AppCompatActivity() {
             )
             startActivity(intent)
             finish()
-        } else {
+        }
+
+        else {
             Toast.makeText(this, "Signup failed!", Toast.LENGTH_SHORT).show()
         }
+
     }
 
     override fun onBackPressed() {
+
         super.onBackPressed()
         val intent = Intent(
             this@Register_activity,
@@ -98,4 +105,5 @@ class Register_activity : AppCompatActivity() {
         )
         startActivity(intent)
     }
+
 }

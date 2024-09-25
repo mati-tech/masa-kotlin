@@ -1,60 +1,94 @@
-package com.mati_tech.masa_english_learning.ui.fragments.fragments_dashboard
+package com.example.masa_english_school.ui.fragments.fragments_dashboards
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.mati_tech.masa_english_learning.R
+import com.example.masa_english_school.authenticator.SessionManager
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.extraStudy_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.grammer_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.vocabulary_fragment
+import com.mati_tech.masa_english_learning.ui.activities.english_test.english_test_levels
 
-/**
- * A simple [Fragment] subclass.
- * Use the [StudentDashboardMainFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class StudentDashboardMainFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var sessionManager: SessionManager
+    var mListener: OnFragmentInteractionListener? = null
+    lateinit var textView: TextView
+    lateinit var goGrammer: ImageView
+    lateinit var goVocab: ImageView
+    lateinit var goMore: ImageView
+    lateinit var engTest: ImageView
+
+    interface OnFragmentInteractionListener {
+        fun onNavigateToFragment(fragment: Fragment?)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnFragmentInteractionListener) {
+            mListener = context
+        } else {
+            throw RuntimeException(
+                context.toString()
+                        + " must implement OnFragmentInteractionListener"
+            )
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_student_dashboard_main, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment StudentDashboardMainFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            StudentDashboardMainFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        sessionManager = SessionManager(requireContext())
+
+        val username = sessionManager.username
+        textView = view.findViewById<TextView>(R.id.stud_id_main_frag)
+        goGrammer = view.findViewById<ImageView>(R.id.grammer_icon_dashboardstu)
+        goVocab = view.findViewById<ImageView>(R.id.vocab_icon_dashboardstu)
+        goMore = view.findViewById<ImageView>(R.id.more_icon_dashboardstu)
+        engTest = view.findViewById<ImageView>(R.id.exam_icon_stud_dashboard)
+
+
+        textView.setText("logged as: $username")
+
+        goGrammer.setOnClickListener(View.OnClickListener {
+            mListener?.onNavigateToFragment(grammer_fragment())
+        })
+        goMore.setOnClickListener(View.OnClickListener {
+            mListener?.onNavigateToFragment(extraStudy_fragment())
+        })
+
+        goVocab.setOnClickListener(View.OnClickListener {
+            mListener?.onNavigateToFragment(vocabulary_fragment())
+        })
+        engTest.setOnClickListener(View.OnClickListener {
+            val intent = Intent(
+                context,
+                english_test_levels::class.java
+            )
+            startActivity(intent)
+        })
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        mListener = null
     }
 }

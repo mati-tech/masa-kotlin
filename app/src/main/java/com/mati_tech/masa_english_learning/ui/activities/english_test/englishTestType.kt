@@ -1,21 +1,46 @@
 package com.mati_tech.masa_english_learning.ui.activities.english_test
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.mati_tech.masa_english_learning.R
 
+
 class englishTestType : AppCompatActivity() {
+    lateinit var vocabView: TextView
+    private var selectedLevel: String? = null
+    lateinit var grammerView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        this.enableEdgeToEdge()
         setContentView(R.layout.activity_english_test_type)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        vocabView = findViewById<TextView>(R.id.vocab_test)
+        grammerView = findViewById<TextView>(R.id.grammer_test)
+
+        selectedLevel = intent.getStringExtra("SELECTED_LEVEL")
+
+        vocabView.setOnClickListener(View.OnClickListener {
+            val intent = Intent(
+                this@englishTestType,
+                testDetails::class.java
+            )
+            intent.putExtra("TEST_LEVEL", selectedLevel)
+            intent.putExtra("TEST_TYPE", "VOCABULARY")
+            startActivity(intent)
+        })
+        grammerView.setOnClickListener(View.OnClickListener {
+            val intent = Intent(
+                this@englishTestType,
+                testDetails::class.java
+            )
+            intent.putExtra("TEST_LEVEL", selectedLevel)
+            intent.putExtra("TEST_TYPE", "GRAMMAR")
+            startActivity(intent)
+        })
     }
 }

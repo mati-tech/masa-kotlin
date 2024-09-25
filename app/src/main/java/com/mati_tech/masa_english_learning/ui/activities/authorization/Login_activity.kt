@@ -1,4 +1,4 @@
-package com.example.masa_english_school.ui.activities.authorization
+package com.mati_tech.masa_english_learning.ui.activities.authorization
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,11 +11,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.mati_tech.masa_english_learning.R
 import com.example.masa_english_school.authenticator.SessionManager
-import com.example.masa_english_school.databaseHelper.DatabaseHelper
+import com.example.masa_english_school.ui.activities.authorization.Register_activity
+import com.mati_tech.masa_english_learning.R
+//import com.mati_tech.masa_english_learning.databaseHelper.DatabaseHelper
 import com.example.masa_english_school.ui.activities.dashboards.Studentdashboard
 import com.example.masa_english_school.ui.activities.dashboards.Teacherdashboard
+import com.mati_tech.masa_english_learning.databaseHelper.DatabaseHelper
 
 class Login_activity : AppCompatActivity() {
     var email_login: EditText? = null
@@ -24,7 +26,7 @@ class Login_activity : AppCompatActivity() {
     var password_login: EditText? = null
     var login_pass_str: String? = null
     var progressBar: ProgressBar? = null
-    var img_view: ImageView? = null
+    lateinit var img_view: ImageView
     var loginbtn_login_activity: Button? = null
     var click_to_register_text: TextView? = null
 
@@ -38,7 +40,7 @@ class Login_activity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         this.enableEdgeToEdge()
         databaseHelper = DatabaseHelper(this)
-        //        databaseHelper.deleteDatabase();
+        databaseHelper?.deleteDatabase();
         img_view = findViewById<ImageView>(R.id.masa_login_icon)
         email_login = findViewById<EditText>(R.id.username_email_login_activity)
         password_login = findViewById<EditText>(R.id.password_login_activity)
@@ -47,18 +49,18 @@ class Login_activity : AppCompatActivity() {
         click_to_register_text = findViewById<TextView>(R.id.click_to_register_view)
 
 
-        loginbtn_login_activity.setOnClickListener(View.OnClickListener {
-            progressBar.setVisibility(View.VISIBLE)
-            login_email_str = email_login.getText().toString()
-            login_pass_str = password_login.getText().toString()
+        loginbtn_login_activity?.setOnClickListener(View.OnClickListener {
+            progressBar?.setVisibility(View.VISIBLE)
+            login_email_str = email_login?.getText().toString()
+            login_pass_str = password_login?.getText().toString()
             loginDatabase(login_email_str!!, login_pass_str!!)
-            progressBar.setVisibility(View.INVISIBLE)
+            progressBar?.setVisibility(View.INVISIBLE)
         })
 
-        click_to_register_text.setOnClickListener(View.OnClickListener {
+        click_to_register_text?.setOnClickListener(View.OnClickListener {
             val intent = Intent(
-                this@login_activity,
-                register_activity::class.java
+                this@Login_activity,
+                Register_activity::class.java
             )
             startActivity(intent)
             finish()
@@ -66,7 +68,7 @@ class Login_activity : AppCompatActivity() {
         //admin login
         img_view.setOnClickListener(View.OnClickListener {
             val intent = Intent(
-                this@login_activity,
+                this@Login_activity,
                 Studentdashboard::class.java
             )
             startActivity(intent)
@@ -75,9 +77,9 @@ class Login_activity : AppCompatActivity() {
     }
 
     private fun loginDatabase(username: String, password: String) {
-        val userExists: Boolean = databaseHelper.readUser(username, password)
+        val userExists: Boolean = databaseHelper!!.readUser(username, password)
 
-        role = databaseHelper.getUserRole(username)
+        role = databaseHelper?.getUserRole(username)
 
 
         if (userExists) {

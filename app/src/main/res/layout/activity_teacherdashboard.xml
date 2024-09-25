@@ -16,7 +16,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/main_fragment_of_teacher_dashboard"
-            android:name="com.example.masa_english_school.ui.fragments.fragments_dashboards.TeacherDashboadMainFragment"
+            android:name="com.mati_tech.masa_english_learning.ui.fragments.fragments_dashboard.TeacherDashboadMainFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp"

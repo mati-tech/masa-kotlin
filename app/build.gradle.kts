@@ -1,6 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+
+
+    id("com.google.devtools.ksp")
+    id("androidx.navigation.safeargs.kotlin")
+
 }
 
 android {
@@ -50,4 +55,16 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    // Room
+    implementation ("androidx.room:room-runtime:2.6.0")
+    ksp ("androidx.room:room-compiler:2.6.0")
+
+    // Kotlin Extensions and Coroutines support for Room
+    implementation ("androidx.room:room-ktx:2.6.0")
+
+
+
+
 }

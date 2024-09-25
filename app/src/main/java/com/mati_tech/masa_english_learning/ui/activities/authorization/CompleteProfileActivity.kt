@@ -1,4 +1,4 @@
-package com.example.masa_english_school.ui.activities.authorization
+package com.mati_tech.masa_english_learning.ui.activities.authorization
 
 import android.os.Bundle
 import android.view.View
@@ -9,9 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.mati_tech.masa_english_learning.R
 import com.example.masa_english_school.authenticator.SessionManager
-import com.example.masa_english_school.models.Student
-import com.example.masa_english_school.models.Teacher
-import com.example.masa_english_school.viewmodel.UserProfileViewModel
+import com.mati_tech.masa_english_learning.viewmodel.UserProfileViewModel
+import com.mati_tech.masa_english_learning.models.Student
+import com.mati_tech.masa_english_learning.models.Teacher
 
 class CompleteProfileActivity : AppCompatActivity() {
     var nameInput: EditText? = null
@@ -49,35 +49,35 @@ class CompleteProfileActivity : AppCompatActivity() {
 
         //        username = sessionManager.getUsername();
         if (role == "teacher") {
-            englishLevelInput.setVisibility(View.GONE)
+            englishLevelInput?.setVisibility(View.GONE)
         } else if (role == "student") {
-            subjectInput.setVisibility(View.GONE)
+            subjectInput?.setVisibility(View.GONE)
         }
 
-        saveProfileButton.setOnClickListener(View.OnClickListener {
-            name_str = nameInput.getText().toString().trim { it <= ' ' }
-            lastname_str = lastNameInput.getText().toString().trim { it <= ' ' }
-            age = ageInput.getText().toString().toInt()
-            subject_str = subjectInput.getText().toString()
-            englishlevel_str = englishLevelInput.getText().toString()
+        saveProfileButton?.setOnClickListener(View.OnClickListener {
+            name_str = nameInput?.getText().toString().trim { it <= ' ' }
+            lastname_str = lastNameInput?.getText().toString().trim { it <= ' ' }
+            age = ageInput?.getText().toString().toInt()
+            subject_str = subjectInput?.getText().toString()
+            englishlevel_str = englishLevelInput?.getText().toString()
             email = sessionManager!!.username
 
             if (role == "teacher") {
                 val teacher: Teacher = Teacher()
-                teacher.name = name_str
-                teacher.lastName = lastname_str
+                teacher.name = name_str.toString()
+                teacher.lastName = lastname_str.toString()
                 teacher.age = age
-                teacher.email = email
-                teacher.subject = subject_str
-                userProfileViewModel.insertTeacher(teacher)
+                teacher.email = email.toString()
+                teacher.subject = subject_str.toString()
+                userProfileViewModel?.insertTeacher(teacher)
             } else if (role == "student") {
                 val student: Student = Student()
-                student.name = name_str
-                student.lastName = lastname_str
+                student.name = name_str.toString()
+                student.lastName = lastname_str.toString()
                 student.age = age
-                student.email = email
-                student.englishLevel = englishlevel_str
-                userProfileViewModel.insertStudent(student)
+                student.email = email.toString()
+                student.englishLevel = englishlevel_str.toString()
+                userProfileViewModel?.insertStudent(student)
             }
             Toast.makeText(
                 this@CompleteProfileActivity,

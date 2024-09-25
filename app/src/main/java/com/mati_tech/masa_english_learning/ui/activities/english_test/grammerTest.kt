@@ -1,21 +1,22 @@
 package com.mati_tech.masa_english_learning.ui.activities.english_test
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.mati_tech.masa_english_learning.R
 
 class grammerTest : AppCompatActivity() {
+    private var test_level: String? = null
+    private var test_type: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        this.enableEdgeToEdge()
         setContentView(R.layout.activity_grammer_test)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        test_level = intent.getStringExtra("TEST_LEVEL")
+        test_type = intent.getStringExtra("TEST_TYPE")
+
+        Toast.makeText(this, test_level + test_type, Toast.LENGTH_SHORT).show()
     }
 }

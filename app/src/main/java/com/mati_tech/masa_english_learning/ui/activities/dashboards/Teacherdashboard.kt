@@ -9,7 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.mati_tech.masa_english_learning.R
-//import com.example.masa_english_school.ui.fragments.fragments_dashboards.TeacherDashboadMainFragment
+//import com.mati_tech.masa_english_learning.ui.fragments.fragments_dashboard.TeacherDashboadMainFragment
 //import com.example.masa_english_school.ui.fragments.fragments_drawer.aboutus_fragment
 //import com.example.masa_english_school.ui.fragments.fragments_drawer.calendar_fragment
 //import com.example.masa_english_school.ui.fragments.fragments_drawer.courseMaterialTeacher_fragment
@@ -19,14 +19,22 @@ import com.mati_tech.masa_english_learning.R
 //import com.example.masa_english_school.ui.fragments.fragments_navigations.vocabulary_fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_dashboard.TeacherDashboadMainFragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.aboutus_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.calendar_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.courseMaterialTeacher_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.profile_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.extraStudy_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.grammer_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.vocabulary_fragment
 import java.util.Objects
 
 class Teacherdashboard : AppCompatActivity(),
     TeacherDashboadMainFragment.OnFragmentInteractionListenerteacher {
-    var Teacher_page_drawer: DrawerLayout? = null
-    var navigationView: NavigationView? = null
-    var toggle_top_left_Teacher_page: ActionBarDrawerToggle? = null
-    var actionBar: ActionBar? = null
+    lateinit var Teacher_page_drawer: DrawerLayout
+    lateinit var navigationView: NavigationView
+    lateinit var toggle_top_left_Teacher_page: ActionBarDrawerToggle
+    lateinit var actionBar: ActionBar
 
     var fragmentManager: FragmentManager? = null
 
@@ -43,14 +51,12 @@ class Teacherdashboard : AppCompatActivity(),
         toggle_top_left_Teacher_page =
             ActionBarDrawerToggle(this@Teacherdashboard, Teacher_page_drawer, 0, 0)
 
-        if (Teacher_page_drawer != null) {
-            Teacher_page_drawer!!.addDrawerListener(toggle_top_left_Teacher_page!!)
-        }
-        toggle_top_left_Teacher_page!!.syncState()
-        Objects.requireNonNull(supportActionBar).setDisplayHomeAsUpEnabled(true)
+        Teacher_page_drawer.addDrawerListener(toggle_top_left_Teacher_page)
+        toggle_top_left_Teacher_page.syncState()
+        Objects.requireNonNull(supportActionBar)?.setDisplayHomeAsUpEnabled(true)
 
-        actionBar = supportActionBar
-        actionBar!!.setTitle("Teacher dashboard")
+        actionBar = supportActionBar!!
+        actionBar.setTitle("Teacher dashboard")
 
         // Initialize the first fragment
         if (savedInstanceState == null) {
@@ -99,7 +105,7 @@ class Teacherdashboard : AppCompatActivity(),
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.main_fragment_of_teacher_dashboard, profile_fragment())
                     .commit()
-                actionBar!!.setTitle("Profile")
+                actionBar.setTitle("Profile")
             } else if (item.itemId == R.id.drawer_materials) {
                 // Handle bookings item click
                 supportFragmentManager.beginTransaction()
@@ -108,20 +114,20 @@ class Teacherdashboard : AppCompatActivity(),
                         courseMaterialTeacher_fragment()
                     )
                     .commit()
-                actionBar!!.setTitle("Course Material")
+                actionBar.setTitle("Course Material")
             } else if (item.itemId == R.id.drawer_calender) {
                 // Handle bookings item click
 
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.main_fragment_of_teacher_dashboard, calendar_fragment())
                     .commit()
-                actionBar!!.setTitle("Calendar")
+                actionBar.setTitle("Calendar")
             } else if (item.itemId == R.id.drawer_about_us) {
                 // Handle profile item click
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.main_fragment_of_teacher_dashboard, aboutus_fragment())
                     .commit()
-                actionBar!!.setTitle("About us")
+                actionBar.setTitle("About us")
             }
 
             //                else if (item.getItemId() == R.id.drawer_Settings) {
@@ -150,7 +156,8 @@ class Teacherdashboard : AppCompatActivity(),
             .commit()
     }
 
-    fun onNavigateToFragmentTeacherDash(fragment: Fragment) {
-        replaceFragment(fragment)
+
+    override fun onNavigateToFragmentTeacherDash(fragment: Fragment?) {
+        replaceFragment(fragment!!)
     }
 }
