@@ -14,7 +14,7 @@ class MaterialRepository(application: Application?) {
 
     init {
         val database = AppDatabase.getInstance(application!!)
-        materialDao = database!!.materialDao()
+        materialDao = database.materialDao()
         allMaterials = materialDao.allMaterials
     }
 

@@ -9,10 +9,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.mati_tech.masa_english_learning.R
-import com.example.masa_english_school.authenticator.SessionManager
-import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.extraStudy_fragment
+import com.mati_tech.masa_english_learning.authenticator.SessionManager
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.ExtraStudyFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.grammer_fragment
-import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.vocabulary_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.VocabularyFragment
 
 class TeacherDashboadMainFragment() : Fragment() {
     lateinit var sessionManager: SessionManager
@@ -69,13 +69,13 @@ class TeacherDashboadMainFragment() : Fragment() {
         })
         goMore.setOnClickListener(View.OnClickListener {
             if (mListenerteacher != null) {
-                mListenerteacher!!.onNavigateToFragmentTeacherDash(extraStudy_fragment())
+                mListenerteacher!!.onNavigateToFragmentTeacherDash(ExtraStudyFragment())
             }
         })
 
         goVocab.setOnClickListener(View.OnClickListener {
             if (mListenerteacher != null) {
-                mListenerteacher!!.onNavigateToFragmentTeacherDash(vocabulary_fragment())
+                mListenerteacher!!.onNavigateToFragmentTeacherDash(VocabularyFragment())
             }
         })
     }

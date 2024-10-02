@@ -9,34 +9,34 @@ import androidx.appcompat.app.AppCompatActivity
 import com.mati_tech.masa_english_learning.R
 
 
-class englishTestType : AppCompatActivity() {
-    lateinit var vocabView: TextView
-    private var selectedLevel: String? = null
-    lateinit var grammerView: TextView
+class EnglishTestType : AppCompatActivity() {
+    private lateinit var vocabView: TextView
+    private lateinit var selectedLevel: String
+    private lateinit var grammarView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.enableEdgeToEdge()
         setContentView(R.layout.activity_english_test_type)
 
-        vocabView = findViewById<TextView>(R.id.vocab_test)
-        grammerView = findViewById<TextView>(R.id.grammer_test)
+        vocabView = findViewById(R.id.vocab_test)
+        grammarView = findViewById(R.id.grammer_test)
 
-        selectedLevel = intent.getStringExtra("SELECTED_LEVEL")
+        selectedLevel = intent.getStringExtra("SELECTED_LEVEL").toString()
 
         vocabView.setOnClickListener(View.OnClickListener {
             val intent = Intent(
-                this@englishTestType,
-                testDetails::class.java
+                this@EnglishTestType,
+                TestDetails::class.java
             )
             intent.putExtra("TEST_LEVEL", selectedLevel)
             intent.putExtra("TEST_TYPE", "VOCABULARY")
             startActivity(intent)
         })
-        grammerView.setOnClickListener(View.OnClickListener {
+        grammarView.setOnClickListener(View.OnClickListener {
             val intent = Intent(
-                this@englishTestType,
-                testDetails::class.java
+                this@EnglishTestType,
+                TestDetails::class.java
             )
             intent.putExtra("TEST_LEVEL", selectedLevel)
             intent.putExtra("TEST_TYPE", "GRAMMAR")

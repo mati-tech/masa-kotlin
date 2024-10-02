@@ -9,25 +9,21 @@ import com.mati_tech.masa_english_learning.models.Student
 import com.mati_tech.masa_english_learning.models.Teacher
 
 class UserProfileViewModel(application: Application) : AndroidViewModel(application) {
-    private val repository: UserRepository
+    private val repository: UserRepository = UserRepository(application)
 
-    init {
-        repository = UserRepository(application)
+    fun insertTeacher(teacher: Teacher) {
+        repository.insertTeacher(teacher)
     }
 
-    fun insertTeacher(teacher: Teacher?) {
-        repository.insertTeacher(teacher!!)
+    fun insertStudent(student: Student) {
+        repository.insertStudent(student)
     }
 
-    fun insertStudent(student: Student?) {
-        repository.insertStudent(student!!)
-    }
-
-    fun getTeacherByEmail(email: String?): LiveData<Teacher?>? {
+    fun getTeacherByEmail(email: String): LiveData<Teacher> {
         return repository.getTeacherByEmail(email)
     }
 
-    fun getStudentByEmail(email: String?): LiveData<Student?>? {
+    fun getStudentByEmail(email: String): LiveData<Student> {
         return repository.getStudentByEmail(email)
     }
 }

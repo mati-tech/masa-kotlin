@@ -15,7 +15,7 @@ class UserRepository(application: Application) {
 
     init {
         val db = AppDatabase.getInstance(application)
-        teacherDao = db!!.teacherDao()
+        teacherDao = db.teacherDao()
         studentDao = db.studentDao()
     }
 
@@ -31,11 +31,11 @@ class UserRepository(application: Application) {
         }
     }
 
-    fun getTeacherByEmail(email: String?): LiveData<Teacher?>? {
+    fun getTeacherByEmail(email: String): LiveData<Teacher> {
         return teacherDao.getTeacherByEmail(email)
     }
 
-    fun getStudentByEmail(email: String?): LiveData<Student?>? {
+    fun getStudentByEmail(email: String): LiveData<Student> {
         return studentDao.getStudentByEmail(email)
     }
 }

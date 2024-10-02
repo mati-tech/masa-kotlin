@@ -32,7 +32,7 @@ class DatabaseHelper // Constructor
         return DATABASE_NAME
     }
 
-    fun insertUser(username: String?, password: String?, role: String?): Long {
+    fun insertUser(username: String, password: String, role: String): Long {
         // Get a writable database
         val db = this.writableDatabase
 
@@ -47,7 +47,6 @@ class DatabaseHelper // Constructor
 
         // Close the database connection
         db.close()
-
         return newRowId
     }
 
@@ -63,7 +62,7 @@ class DatabaseHelper // Constructor
         )
 
         // Define 'where' part of query
-        val selection = columnUsername + " = ? AND " + columnPassword + " = ?"
+        val selection = "$columnUsername = ? AND $columnPassword = ?"
         val selectionArgs = arrayOf(username, password)
 
         // Perform the query
@@ -76,19 +75,16 @@ class DatabaseHelper // Constructor
             null,  // Don't filter by row groups
             null // The sort order
         )
-
         // Check if a user was found
         val userExists = cursor.count > 0
-
         // Close the cursor and the database
         cursor.close()
         db.close()
-
         return userExists
     }
 
 
-    // You can delete the user here usign this command
+    // You can delete the user here using this command
     fun deleteDatabase() {
         mContext!!.deleteDatabase(DATABASE_NAME)
     }
@@ -99,7 +95,7 @@ class DatabaseHelper // Constructor
     fun getUserRole(username: String): String? {
         val db = this.readableDatabase
         val projection = arrayOf(columnUsername, COLUMN_ROLE)
-        val selection = columnUsername + " = ?"
+        val selection = "$columnUsername = ?"
         val selectionArgs = arrayOf(username)
         val cursor = db.query(tableName, projection, selection, selectionArgs, null, null, null)
         var role: String? = null
@@ -115,7 +111,7 @@ class DatabaseHelper // Constructor
     fun getUserEmail(username: String): String? {
         val db = this.readableDatabase
         val projection = arrayOf(columnUsername)
-        val selection = columnUsername + " = ?"
+        val selection = "$columnUsername = ?"
         val selectionArgs = arrayOf(username)
         val cursor = db.query(tableName, projection, selection, selectionArgs, null, null, null)
         var userEmail: String? = null

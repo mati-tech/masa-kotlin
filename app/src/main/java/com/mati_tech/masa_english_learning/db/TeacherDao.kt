@@ -13,5 +13,5 @@ interface TeacherDao {
     fun insert(teacher: Teacher)
 
     @Query("SELECT * FROM teacher WHERE email = :email LIMIT 1")
-    fun getTeacherByEmail(email: String?): LiveData<Teacher?>?
+    fun getTeacherByEmail(email: String): LiveData<Teacher>
 }

@@ -8,7 +8,7 @@
     android:backgroundTint="@color/white"
     android:background="@color/white"
     android:layout_marginTop="30dp"
-    tools:context=".ui.activities.authorization.login_activity"
+    tools:context=".ui.activities.authorization.LoginActivity"
     >
     <LinearLayout
         android:layout_width="match_parent"

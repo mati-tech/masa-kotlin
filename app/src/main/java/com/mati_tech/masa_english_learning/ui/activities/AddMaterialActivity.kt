@@ -8,7 +8,7 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import android.view.View
+
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -24,31 +24,29 @@ import com.mati_tech.masa_english_learning.viewmodel.MaterialViewModel
 import com.mati_tech.masa_english_learning.R
 import com.mati_tech.masa_english_learning.models.Material
 
-class addMaterialActivity : AppCompatActivity() {
-    private var editTextFileName: EditText? = null
-    private var editTextFileDescription: EditText? = null
-    private var buttonAdd: Button? = null
-    private var buttonChooseFile: Button? = null
-    private var textViewFilePath: TextView? = null
-    private var fileUri: Uri? = null
-    private var materialViewModel: MaterialViewModel? = null
+class AddMaterialActivity : AppCompatActivity() {
+    private lateinit var editTextFileName: EditText
+    private lateinit var editTextFileDescription: EditText
+    private lateinit var buttonAdd: Button
+    private lateinit var buttonChooseFile: Button
+    private lateinit var textViewFilePath: TextView
+    private lateinit var fileUri: Uri
+    private lateinit var materialViewModel: MaterialViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_material)
 
-        editTextFileName = findViewById<EditText>(R.id.edit_text_filename)
-        editTextFileDescription = findViewById<EditText>(R.id.edit_text_file_description)
-        buttonAdd = findViewById<Button>(R.id.button_add_material)
-        buttonChooseFile = findViewById<Button>(R.id.button_choose_file)
-        textViewFilePath = findViewById<TextView>(R.id.text_view_file_path)
-        materialViewModel = ViewModelProvider(this).get(
-            MaterialViewModel::class.java
-        )
+        editTextFileName = findViewById(R.id.edit_text_filename)
+        editTextFileDescription = findViewById(R.id.edit_text_file_description)
+        buttonAdd = findViewById(R.id.button_add_material)
+        buttonChooseFile = findViewById(R.id.button_choose_file)
+        textViewFilePath = findViewById(R.id.text_view_file_path)
+        materialViewModel = ViewModelProvider(this)[MaterialViewModel::class.java]
         requestRuntimePermission()
-        buttonChooseFile?.setOnClickListener(View.OnClickListener { openFilePicker() })
+        buttonChooseFile.setOnClickListener { openFilePicker() }
 
-        buttonAdd?.setOnClickListener(View.OnClickListener { saveMaterial() })
+        buttonAdd.setOnClickListener { saveMaterial() }
     }
 
     //    private void requestStoragePermissions() {
@@ -61,29 +59,29 @@ class addMaterialActivity : AppCompatActivity() {
     //    }
     private fun requestRuntimePermission() {
         if (ActivityCompat.checkSelfPermission(
-                this@addMaterialActivity,
+                this@AddMaterialActivity,
                 PERMISSION_READ_EXTERNAL_STORAGE
             ) == PackageManager.PERMISSION_GRANTED
         ) {
             Toast.makeText(this, "Permission granted", Toast.LENGTH_SHORT).show()
         } else if (ActivityCompat.shouldShowRequestPermissionRationale(
-                this@addMaterialActivity,
+                this@AddMaterialActivity,
                 PERMISSION_READ_EXTERNAL_STORAGE
             )
         ) {
-            val builder = AlertDialog.Builder(this@addMaterialActivity)
+            val builder = AlertDialog.Builder(this@AddMaterialActivity)
             builder.setMessage("This app requires reading external storage")
                 .setCancelable(false)
-                .setPositiveButton("Ok") { dialog: DialogInterface, which: Int ->
+                .setPositiveButton("Ok") { dialog: DialogInterface, _: Int ->
                     ActivityCompat.requestPermissions(
-                        this@addMaterialActivity,
+                        this@AddMaterialActivity,
                         arrayOf(PERMISSION_READ_EXTERNAL_STORAGE),
                         PERMISSION_REQ_CODE
                     )
                     dialog.dismiss()
                 }
                 .setNegativeButton("Cancel",
-                    (DialogInterface.OnClickListener { dialog: DialogInterface, which: Int -> dialog.dismiss() })
+                    (DialogInterface.OnClickListener { dialog: DialogInterface, _: Int -> dialog.dismiss() })
                 )
             builder.show()
         } else {
@@ -104,27 +102,27 @@ class addMaterialActivity : AppCompatActivity() {
     }
 
     @SuppressLint("WrongConstant")
-    private val filePickerLauncher = registerForActivityResult<Intent, ActivityResult>(
+    private val filePickerLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result: ActivityResult ->
         if (result.resultCode == RESULT_OK) {
             val data = result.data
             if (data != null) {
-                fileUri = data.data
-                textViewFilePath!!.text = fileUri.toString()
+                fileUri = data.data!!
+                textViewFilePath.text = fileUri.toString()
 
                 // Take persistable URI permission
                 val takeFlags =
                     data.flags and (Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
-                contentResolver.takePersistableUriPermission(fileUri!!, takeFlags)
+                contentResolver.takePersistableUriPermission(fileUri, takeFlags)
             }
         }
     }
 
     private fun saveMaterial() {
-        val fileName = editTextFileName!!.text.toString().trim { it <= ' ' }
-        val fileDescription = editTextFileDescription!!.text.toString().trim { it <= ' ' }
-        if (fileName.isEmpty() || fileDescription.isEmpty() || fileUri == null) {
+        val fileName = editTextFileName.text.toString().trim { it <= ' ' }
+        val fileDescription = editTextFileDescription.text.toString().trim { it <= ' ' }
+        if (fileName.isEmpty() || fileDescription.isEmpty()) {
             Toast.makeText(this, "Please fill out all fields and choose a file", Toast.LENGTH_SHORT)
                 .show()
             return
@@ -132,8 +130,8 @@ class addMaterialActivity : AppCompatActivity() {
         // Convert Uri to a file path or store the Uri directly in the database
         val filePath = fileUri.toString()
 
-        val material: Material = Material(fileName, fileDescription, filePath)
-        materialViewModel!!.insert(material)
+        val material = Material(fileName, fileDescription, filePath)
+        materialViewModel.insert(material)
         Toast.makeText(this, "Material added", Toast.LENGTH_SHORT).show()
         finish()
     }
@@ -156,22 +154,22 @@ class addMaterialActivity : AppCompatActivity() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == PERMISSION_REQ_CODE) {
-            if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this@addMaterialActivity, "Permission granted!", Toast.LENGTH_SHORT)
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this@AddMaterialActivity, "Permission granted!", Toast.LENGTH_SHORT)
                     .show()
             } else if (!ActivityCompat.shouldShowRequestPermissionRationale(
-                    this@addMaterialActivity,
+                    this@AddMaterialActivity,
                     PERMISSION_READ_EXTERNAL_STORAGE
                 )
             ) {
-                val builder = AlertDialog.Builder(this@addMaterialActivity)
+                val builder = AlertDialog.Builder(this@AddMaterialActivity)
                 builder.setMessage("This feature is unavailable because you have denied the permission for it, Please allow the permission from the setting to proceed")
                     .setTitle("Permission Required")
                     .setCancelable(false)
                     .setNegativeButton(
                         "Cancel"
-                    ) { dialog: DialogInterface, which: Int -> dialog.dismiss() }
-                    .setPositiveButton("Settings") { dialog: DialogInterface, which: Int ->
+                    ) { dialog: DialogInterface, _: Int -> dialog.dismiss() }
+                    .setPositiveButton("Settings") { dialog: DialogInterface, _: Int ->
                         val intent =
                             Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
                         val uri =

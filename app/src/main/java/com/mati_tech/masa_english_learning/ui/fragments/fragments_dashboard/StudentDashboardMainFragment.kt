@@ -10,12 +10,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.mati_tech.masa_english_learning.R
-import com.example.masa_english_school.authenticator.SessionManager
+import com.mati_tech.masa_english_learning.authenticator.SessionManager
 
-import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.extraStudy_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.ExtraStudyFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.grammer_fragment
-import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.vocabulary_fragment
-import com.mati_tech.masa_english_learning.ui.activities.english_test.english_test_levels
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.VocabularyFragment
+import com.mati_tech.masa_english_learning.ui.activities.english_test.EnglishTestLevels
 
 class StudentDashboardMainFragment : Fragment() {
     lateinit var sessionManager: SessionManager
@@ -72,16 +72,16 @@ class StudentDashboardMainFragment : Fragment() {
             mListener?.onNavigateToFragment(grammer_fragment())
         })
         goMore.setOnClickListener(View.OnClickListener {
-            mListener?.onNavigateToFragment(extraStudy_fragment())
+            mListener?.onNavigateToFragment(ExtraStudyFragment())
         })
 
         goVocab.setOnClickListener(View.OnClickListener {
-            mListener?.onNavigateToFragment(vocabulary_fragment())
+            mListener?.onNavigateToFragment(VocabularyFragment())
         })
         engTest.setOnClickListener(View.OnClickListener {
             val intent = Intent(
                 context,
-                english_test_levels::class.java
+                EnglishTestLevels::class.java
             )
             startActivity(intent)
         })

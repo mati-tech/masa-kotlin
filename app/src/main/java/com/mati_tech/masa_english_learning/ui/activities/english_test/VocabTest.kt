@@ -6,17 +6,19 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.mati_tech.masa_english_learning.R
 
-class grammerTest : AppCompatActivity() {
-    private var test_level: String? = null
-    private var test_type: String? = null
+class VocabTest : AppCompatActivity() {
+    private var testLevel: String? = null
+    private var testType: String? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.enableEdgeToEdge()
-        setContentView(R.layout.activity_grammer_test)
+        setContentView(R.layout.activity_vocab_test)
 
-        test_level = intent.getStringExtra("TEST_LEVEL")
-        test_type = intent.getStringExtra("TEST_TYPE")
+        testLevel = intent.getStringExtra("TEST_LEVEL")
+        testType = intent.getStringExtra("TEST_TYPE")
 
-        Toast.makeText(this, test_level + test_type, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, testLevel + testType, Toast.LENGTH_SHORT).show()
     }
 }

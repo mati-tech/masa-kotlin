@@ -7,7 +7,7 @@ import androidx.room.ColumnInfo
 @Entity(tableName = "materials")
 class Material(
     @ColumnInfo(name = "filename") var filename: String,  // pdf, image, etc.
-    @ColumnInfo(name = "filedescription") var filedescription: String,
+    @ColumnInfo(name = "description") var filedescription: String,
     @ColumnInfo(name = "filePath") var filePath: String
 ) {
     @PrimaryKey(autoGenerate = true)

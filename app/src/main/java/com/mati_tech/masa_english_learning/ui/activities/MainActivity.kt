@@ -7,9 +7,9 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import com.mati_tech.masa_english_learning.R
-import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.aboutus_fragment
-import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.calendar_fragment
-import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.profile_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.AboutusFragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.CalendarFragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.ProfileFragment
 import com.google.android.material.navigation.NavigationView
 import java.util.Objects
 
@@ -44,18 +44,18 @@ class MainActivity : AppCompatActivity() {
                 // Handle destinations item click
                 // Replace the current fragment with the "Los Angeles" fragment
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_fragment_of_main_activity, profile_fragment())
+                    .replace(R.id.main_fragment_of_main_activity, ProfileFragment())
                     .commit()
             } else if (item.itemId == R.id.drawer_calender) {
                 // Handle bookings item click
 
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_fragment_of_main_activity, calendar_fragment())
+                    .replace(R.id.main_fragment_of_main_activity, CalendarFragment())
                     .commit()
             } else if (item.itemId == R.id.drawer_about_us) {
                 // Handle profile item click
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_fragment_of_main_activity, aboutus_fragment())
+                    .replace(R.id.main_fragment_of_main_activity, AboutusFragment())
                     .commit()
             }
 

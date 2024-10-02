@@ -24,31 +24,42 @@
         android:theme="@style/Theme.MASA_English_School"
         tools:targetApi="31">
         <activity
-            android:name=".ui.activities.addMaterialActivity"
+            android:name=".ui.activities.AddMaterialActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activities.vocabulary.vocabDetail"
-            android:exported="false" />
+
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
         <activity
             android:name=".ui.activities.studymore.studyMore"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".ui.activities.grammer.grammerDetail"
+
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.english_test.vocabTest"
+            android:name=".ui.activities.english_test.VocabTest"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.english_test.testDetails"
+            android:name=".ui.activities.english_test.TestDetails"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.english_test.grammerTest"
+            android:name=".ui.activities.english_test.GrammerTest"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.english_test.englishTestType"
+            android:name=".ui.activities.english_test.EnglishTestType"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.english_test.english_test_levels"
+            android:name=".ui.activities.english_test.EnglishTestLevels"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".ui.activities.dashboards.Teacherdashboard"
@@ -56,25 +67,28 @@
         <activity
             android:name=".ui.activities.dashboards.Studentdashboard"
             android:exported="false"
-            android:theme="@style/Theme.MASA_English_School" />
+            />
         <activity
-            android:name=".ui.activities.authorization.completeProfileActivity"
+            android:name=".ui.activities.authorization.CompleteProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.authorization.Register_activity"
+            android:name=".ui.activities.authorization.RegisterActivity"
+            android:theme="@style/Theme.MASA_English_School_no_action_bar"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.authorization.Login_activity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.activities.authorization.Splash_activity"
+            android:name=".ui.activities.authorization.LoginActivity"
+            android:theme="@style/Theme.MASA_English_School_no_action_bar"
             android:exported="false" />
         <activity
             android:name=".ui.activities.MainActivity"
+            android:theme="@style/Theme.MASA_English_School"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.authorization.Splash_activity"
+            android:theme="@style/Theme.MASA_English_School_no_action_bar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

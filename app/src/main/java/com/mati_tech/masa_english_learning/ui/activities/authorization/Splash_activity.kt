@@ -10,22 +10,15 @@ import com.mati_tech.masa_english_learning.R
 class Splash_activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         enableEdgeToEdge()
-
         setContentView(R.layout.activity_splash)
-
-
-        //        for testing commented
         Handler().postDelayed({
             val intent = Intent(
                 this@Splash_activity,
-                Login_activity::class.java
+                LoginActivity::class.java
             )
             startActivity(intent)
             finish() // Close the SplashActivity
         }, 1000) // Delay in milliseconds (3000ms = 3s)
-
-
     }
 }

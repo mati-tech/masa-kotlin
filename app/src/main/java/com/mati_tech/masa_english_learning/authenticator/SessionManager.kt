@@ -1,16 +1,11 @@
-package com.example.masa_english_school.authenticator
+package com.mati_tech.masa_english_learning.authenticator
 
 import android.content.Context
 import android.content.SharedPreferences
 
 class SessionManager(context: Context) {
-    private val sharedPreferences: SharedPreferences
-    private val editor: SharedPreferences.Editor
-
-    init {
-        sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
-        editor = sharedPreferences.edit()
-    }
+    private val sharedPreferences: SharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
+    private val editor: SharedPreferences.Editor = sharedPreferences.edit()
 
     fun saveSession(username: String?, role: String?) {
         editor.putString(KEY_USERNAME, username)

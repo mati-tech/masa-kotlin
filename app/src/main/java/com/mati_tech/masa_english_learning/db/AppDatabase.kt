@@ -19,25 +19,13 @@ abstract class AppDatabase : RoomDatabase() {
 
     companion object {
         @Volatile
-        private var instance: AppDatabase? = null
+        private lateinit var instance: AppDatabase
         private const val NUMBER_OF_THREADS = 4
         val databaseWriteExecutor: ExecutorService = Executors.newFixedThreadPool(
             NUMBER_OF_THREADS
         )
 
-        fun getInstance(context: Context): AppDatabase? {
-            if (instance == null) {
-                synchronized(AppDatabase::class.java) {
-                    if (instance == null) {
-                        instance = Room.databaseBuilder(
-                            context.applicationContext,
-                            AppDatabase::class.java, "app_database"
-                        )
-                            .fallbackToDestructiveMigration()
-                            .build()
-                    }
-                }
-            }
+        fun getInstance(context: Context): AppDatabase {
             return instance
         }
     }

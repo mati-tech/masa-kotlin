@@ -1,5 +1,6 @@
 package com.mati_tech.masa_english_learning.ui.activities.english_test
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -19,29 +20,30 @@ import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
 
-class testDetails : AppCompatActivity() {
+class TestDetails : AppCompatActivity() {
 
 
-    private var test_level: String? = null
-    private var test_type: String? = null
-    var textView: TextView? = null
+    private lateinit var testLevel: String
+    private lateinit var testType: String
+    private lateinit var textView: TextView
 
-    private var questionsContainer: LinearLayout? = null
-    private var submitButton: Button? = null
-    private var questionsList: MutableList<Question>? = null
+    private lateinit var questionsContainer: LinearLayout
+    private lateinit var submitButton: Button
+    private lateinit var questionsList: MutableList<Question>
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.enableEdgeToEdge()
         setContentView(R.layout.activity_test_details)
 
-        test_level = intent.getStringExtra("TEST_LEVEL")
-        test_type = intent.getStringExtra("TEST_TYPE")
-        textView = findViewById<TextView>(R.id.test_title_text_view)
-        textView?.setText("English level $test_level $test_type part\n")
+        testLevel = intent.getStringExtra("TEST_LEVEL").toString()
+        testType = intent.getStringExtra("TEST_TYPE").toString()
+        textView = findViewById(R.id.test_title_text_view)
+        textView.text = "English level $testLevel $testType part\n"
 
-        questionsContainer = findViewById<LinearLayout>(R.id.questions_container)
-        submitButton = findViewById<Button>(R.id.submit_button)
-        questionsList = ArrayList<Question>()
+        questionsContainer = findViewById(R.id.questions_container)
+        submitButton = findViewById(R.id.submit_button)
+        questionsList = ArrayList()
 
 
 //        Toast.makeText(this, test_level + test_type, Toast.LENGTH_SHORT).show();
@@ -51,7 +53,7 @@ class testDetails : AppCompatActivity() {
         if (jsonString != null) {
             displayTest(jsonString)
         }
-        submitButton?.setOnClickListener(View.OnClickListener { evaluateAnswers() })
+        submitButton.setOnClickListener { evaluateAnswers() }
     }
 
 
@@ -76,10 +78,10 @@ class testDetails : AppCompatActivity() {
     private fun displayTest(jsonString: String) {
         try {
             val jsonObject = JSONObject(jsonString)
-            val tests = jsonObject.getJSONArray(test_level)
+            val tests = jsonObject.getJSONArray(testLevel)
             for (i in 0 until tests.length()) {
                 val test = tests.getJSONObject(i)
-                if (test.getString("type") == test_type) {
+                if (test.getString("type") == testType) {
                     val questionsArray = test.getJSONArray("questions")
                     for (j in 0 until questionsArray.length()) {
                         val questionObject = questionsArray.getJSONObject(j)
@@ -95,7 +97,7 @@ class testDetails : AppCompatActivity() {
                         val questionTextView = TextView(this)
                         questionTextView.text = questionText
                         questionTextView.setPadding(0, 15, 0, 15)
-                        questionsContainer!!.addView(questionTextView)
+                        questionsContainer.addView(questionTextView)
 
                         val optionsGroup = RadioGroup(this)
                         for (k in 0 until optionsArray.length()) {
@@ -104,10 +106,10 @@ class testDetails : AppCompatActivity() {
                             optionButton.text = option
                             optionsGroup.addView(optionButton)
                         }
-                        questionsContainer!!.addView(optionsGroup)
+                        questionsContainer.addView(optionsGroup)
 
                         question.optionsGroup = optionsGroup
-                        questionsList!!.add(question)
+                        questionsList.add(question)
                     }
                 }
             }
@@ -117,9 +119,10 @@ class testDetails : AppCompatActivity() {
     }
 
 
+    @SuppressLint("SetTextI18n")
     private fun evaluateAnswers() {
         var correctAnswersCount = 0
-        for (question in questionsList!!) {
+        for (question in questionsList) {
             val optionsGroup: RadioGroup = question.optionsGroup
             val selectedId = optionsGroup.checkedRadioButtonId
             if (selectedId != -1) {
@@ -139,11 +142,11 @@ class testDetails : AppCompatActivity() {
                 }
             }
         }
-        textView!!.text = """English level $test_level $test_type part
-                            You got $correctAnswersCount out of ${questionsList!!.size} correct!"""
+        textView.text = """English level $testLevel $testType part
+                            You got $correctAnswersCount out of ${questionsList.size} correct!"""
         Toast.makeText(
             this,
-            "You got " + correctAnswersCount + " out of " + questionsList!!.size + " correct!",
+            "You got " + correctAnswersCount + " out of " + questionsList.size + " correct!",
             Toast.LENGTH_LONG
         ).show()
     }

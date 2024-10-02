@@ -15,23 +15,19 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.mati_tech.masa_english_learning.R
-import com.example.masa_english_school.authenticator.SessionManager
+import com.mati_tech.masa_english_learning.authenticator.SessionManager
 import com.mati_tech.masa_english_learning.models.Material
 import com.mati_tech.masa_english_learning.viewmodel.MaterialViewModel
 
 class MaterialAdapter(
     private val context: Context,
-    materialViewModel: MaterialViewModel?,
+    private val materialViewModel: MaterialViewModel,
     private val sessionManager: SessionManager
 ) :
     RecyclerView.Adapter<MaterialAdapter.MaterialHolder>() {
-    private var materials: MutableList<Material> = mutableListOf()
+    var materials: MutableList<Material> = mutableListOf()
 
-    private val materialViewModel: MaterialViewModel? = materialViewModel
 
-    init {
-        requireNotNull(materialViewModel) { "MaterialViewModel cannot be null" }
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MaterialHolder {
         val itemView: View =
@@ -39,6 +35,7 @@ class MaterialAdapter(
         return MaterialHolder(itemView)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MaterialHolder, position: Int) {
         val currentMaterial: Material = materials[position]
 
@@ -46,7 +43,7 @@ class MaterialAdapter(
         holder.textViewFileName.text = "File name: " + getFileNameFromPath(currentMaterial.filename) // Display file name
 
         // Check the file_type of the uploaded file
-        val fileType = recognize_file(currentMaterial.filePath)
+        val fileType = recognizeFile(currentMaterial.filePath)
 
         if (fileType == "image") {
             holder.pdf.visibility = View.INVISIBLE
@@ -98,10 +95,9 @@ class MaterialAdapter(
         AlertDialog.Builder(context)
             .setTitle("Delete Material")
             .setMessage("Are you sure you want to delete this material?")
-            .setPositiveButton("Yes") { dialog: DialogInterface?, which: Int ->
-                val adapterPosition = position
-                if (adapterPosition != RecyclerView.NO_POSITION) {
-                    deleteMaterial(adapterPosition)
+            .setPositiveButton("Yes") { _: DialogInterface?, _: Int ->
+                if (position != RecyclerView.NO_POSITION) {
+                    deleteMaterial(position)
                 }
             }
             .setNegativeButton("No", null)
@@ -117,7 +113,7 @@ class MaterialAdapter(
         notifyItemRemoved(position)
 
         // Remove the material from the database using ViewModel
-//        materialViewModel?.delete(material)
+        materialViewModel.delete(material)
 
         Toast.makeText(context, "Material deleted", Toast.LENGTH_SHORT).show()
     }
@@ -131,27 +127,28 @@ class MaterialAdapter(
         return materials.size
     }
 
-//    fun setMaterials(materials: List<Material>) {
-//        this.materials = materials
-//        notifyDataSetChanged()
-//    }
+    @SuppressLint("NotifyDataSetChanged")
+    fun setMaterial(materials: List<Material>) {
+        this.materials = materials.toMutableList()
+        notifyDataSetChanged()
+    }
 
     inner class MaterialHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         internal val textViewDescription: TextView =
-            itemView.findViewById<TextView>(R.id.text_view_description)
+            itemView.findViewById(R.id.text_view_description)
 
         //            textViewFileUri = itemView.findViewById(R.id.text_view_file_uri);
-        val textViewFileName: TextView = itemView.findViewById<TextView>(R.id.text_view_filename)
-        val image: ImageView = itemView.findViewById<ImageView>(R.id.materials_image)
-        val pdf: ImageView = itemView.findViewById<ImageView>(R.id.material_pdf)
+        val textViewFileName: TextView = itemView.findViewById(R.id.text_view_filename)
+        val image: ImageView = itemView.findViewById(R.id.materials_image)
+        val pdf: ImageView = itemView.findViewById(R.id.material_pdf)
 
         private val textViewFileUri: TextView? = null
     }
 
-    fun recognize_file(file_path: String): String {
-        return if (file_path.contains("/image") || file_path.contains(".jpg") || file_path.contains(
+    private fun recognizeFile(filePath: String): String {
+        return if (filePath.contains("/image") || filePath.contains(".jpg") || filePath.contains(
                 ".jpeg"
-            ) || file_path.contains(".png")
+            ) || filePath.contains(".png")
         ) {
             "image"
         } else {

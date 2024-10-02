@@ -7,7 +7,7 @@
     android:theme="@style/Theme.MASA_English_School_no_action_bar"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activities.english_test.english_test_levels">
+    tools:context=".ui.activities.english_test.EnglishTestLevels">
 
 
     <LinearLayout

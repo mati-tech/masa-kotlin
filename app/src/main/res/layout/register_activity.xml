@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginTop="30dp"
     android:theme="@style/Theme.AppCompat.NoActionBar"
-    tools:context=".ui.activities.authorization.Register_activity"
+    tools:context=".ui.activities.authorization.RegisterActivity"
     >
     <ScrollView
         android:layout_width="match_parent"
