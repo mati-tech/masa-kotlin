@@ -151,9 +151,39 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var progressBar: ProgressBar
     private lateinit var loginLoginActivity: Button
     private lateinit var clickToRegisterText: TextView
+    private lateinit var pass_req: TextView
     private lateinit var auth: FirebaseAuth
     private lateinit var authViewModel: AuthenticationViewModel
     private lateinit var sessionManager: SessionManager
+    override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            // User is signed in, navigate to the appropriate dashboard based on the role
+            navigateToDashboard(currentUser.uid)
+        }
+    }
+
+    private fun navigateToDashboard(userId: String) {
+        // Use the UID to fetch the role and navigate accordingly
+        getUserRole(userId) { role ->
+            val email = auth.currentUser?.email
+            if (email != null ) {
+                sessionManager.saveSession(email ,role)
+            }
+            val intent = when (role) {
+                "teacher" -> Intent(this, Teacherdashboard::class.java)
+                "student" -> Intent(this, Studentdashboard::class.java)
+                else -> {
+                    Toast.makeText(this, "Unknown role", Toast.LENGTH_SHORT).show()
+                    return@getUserRole // Return if role is unknown
+                }
+            }
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -166,10 +196,17 @@ class LoginActivity : AppCompatActivity() {
         loginLoginActivity = findViewById(R.id.login_button_login_activity)
         clickToRegisterText = findViewById(R.id.click_to_register_view)
         sessionManager = SessionManager(this)
+        pass_req = findViewById(R.id.pass_req_login_form)
+        passwordLogin.setOnClickListener{
+            pass_req.visibility = View.VISIBLE
+        }
+
+
 
         authViewModel = ViewModelProvider(this)[AuthenticationViewModel::class.java]
 
         loginLoginActivity.setOnClickListener {
+
             progressBar.visibility = View.VISIBLE
             loginEmailStr = emailLogin.text.toString().trim()
             loginPassStr = passwordLogin.text.toString().trim()

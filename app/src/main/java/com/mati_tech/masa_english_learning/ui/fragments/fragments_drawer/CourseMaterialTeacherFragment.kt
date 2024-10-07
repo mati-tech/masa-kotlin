@@ -42,7 +42,7 @@ class CourseMaterialTeacherFragment : Fragment() {
         adapter = context?.let { MaterialAdapter(it, materialViewModel, sessionManager) }!!
         recyclerView.setAdapter(adapter)
         materialViewModel.getAllMaterials().observe(viewLifecycleOwner) { materials ->
-            adapter.materials = (materials.toMutableList())
+            adapter.setMaterial(materials)
         }
         return view
     }
@@ -59,4 +59,6 @@ class CourseMaterialTeacherFragment : Fragment() {
             startActivity(intent)
         }
     }
+
+
 }

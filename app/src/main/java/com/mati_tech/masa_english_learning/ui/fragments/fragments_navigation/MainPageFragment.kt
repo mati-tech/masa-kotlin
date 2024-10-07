@@ -17,4 +17,7 @@ class MainPageFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_main_page_fragment, container, false)
     }
 
+
+
+
 }

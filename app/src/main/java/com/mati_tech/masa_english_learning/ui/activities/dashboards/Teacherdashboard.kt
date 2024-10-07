@@ -27,6 +27,7 @@ import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.Profile
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.ExtraStudyFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.GrammerFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.VocabularyFragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.englishHomeFragment
 import java.util.Objects
 
 class Teacherdashboard : AppCompatActivity(),
@@ -136,6 +137,7 @@ class Teacherdashboard : AppCompatActivity(),
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Pass the event to the ActionBarDrawerToggle, if it returns true, then it has handled the app icon touch event
         if (toggleTopLeftTeacherPage.onOptionsItemSelected(item)) {
+
             return true
         }
         return super.onOptionsItemSelected(item)
@@ -151,4 +153,19 @@ class Teacherdashboard : AppCompatActivity(),
     override fun onNavigateToFragmentTeacherDash(fragment: Fragment?) {
         replaceFragment(fragment!!)
     }
+
+//    override fun onBackPressed() {
+//        val fragment = supportFragmentManager.findFragmentById(R.id.main_fragment_of_teacher_dashboard)
+//
+//        // Check if there's a fragment in the back stack
+//        if (fragment != null && supportFragmentManager.backStackEntryCount > 0) {
+//            supportFragmentManager.popBackStack()
+//        } else {
+//            super.onBackPressed() // Exit the app
+//        }
+//    }
+
+
+
+
 }

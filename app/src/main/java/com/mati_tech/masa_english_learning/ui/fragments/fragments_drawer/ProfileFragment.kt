@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 
 import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.auth.FirebaseAuth
 import com.mati_tech.masa_english_learning.R
 import com.mati_tech.masa_english_learning.authenticator.SessionManager
 
@@ -32,6 +33,7 @@ class ProfileFragment : Fragment() {
     private lateinit var subjectTextView: TextView
     private lateinit var englishLevelTextView: TextView
     private lateinit var roleView: TextView
+    private lateinit var auth: FirebaseAuth
     private lateinit var EmailView: TextView
     private lateinit var sessionManager: SessionManager
     private lateinit var userProfileViewModel: UserProfileViewModel
@@ -52,7 +54,7 @@ class ProfileFragment : Fragment() {
         username = sessionManager.username.toString()
         role = sessionManager.role.toString()
         userProfileViewModel = ViewModelProvider(this)[UserProfileViewModel::class.java]
-
+        auth = FirebaseAuth.getInstance()
         // Initialize UI elements
         nameTextView = view.findViewById(R.id.name_view)
         lastNameTextView = view.findViewById(R.id.lastname_view)
@@ -73,10 +75,12 @@ class ProfileFragment : Fragment() {
         //here use the role and the email from here
 //        prof_info.setText("Username: "+ username + "\n"+ "Role as: "+ role );
         signout.setOnClickListener {
+            auth.signOut()
             val intent = Intent(
                 context,
                 LoginActivity::class.java
             )
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             requireActivity().finish()
         }
