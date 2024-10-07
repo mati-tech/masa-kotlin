@@ -10,7 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.mati_tech.masa_english_learning.R
-import com.example.masa_english_school.ui.fragments.fragments_dashboards.StudentDashboardMainFragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_dashboard.StudentDashboardMainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.AboutusFragment
@@ -18,15 +18,15 @@ import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.Calenda
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.CourseMaterialStudentFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.ProfileFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.ExtraStudyFragment
-import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.grammer_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.GrammerFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.VocabularyFragment
 import java.util.Objects
 
 class Studentdashboard : AppCompatActivity(),
     StudentDashboardMainFragment.OnFragmentInteractionListener {
-    private lateinit var student_page_drawer: DrawerLayout
+    private lateinit var studentPageDrawer: DrawerLayout
     private lateinit var navigationView: NavigationView
-    private lateinit var toggle_top_left_student_page: ActionBarDrawerToggle
+    private lateinit var toggleTopLeftStudentPage: ActionBarDrawerToggle
     private lateinit var actionBar: ActionBar
     private lateinit var fragmentManager: FragmentManager
 
@@ -43,12 +43,12 @@ class Studentdashboard : AppCompatActivity(),
         val stumainfragment: StudentDashboardMainFragment = StudentDashboardMainFragment()
 
 
-        student_page_drawer = findViewById(R.id.Student_dashboard_main_drawer_layout)
+        studentPageDrawer = findViewById(R.id.Student_dashboard_main_drawer_layout)
         navigationView = findViewById(R.id.drawer_menu_left_student_page_navigation_view)
-        toggle_top_left_student_page = ActionBarDrawerToggle(this@Studentdashboard, student_page_drawer, 0, 0)
+        toggleTopLeftStudentPage = ActionBarDrawerToggle(this@Studentdashboard, studentPageDrawer, 0, 0)
 
-        student_page_drawer.addDrawerListener(toggle_top_left_student_page)
-        toggle_top_left_student_page.syncState()
+        studentPageDrawer.addDrawerListener(toggleTopLeftStudentPage)
+        toggleTopLeftStudentPage.syncState()
         Objects.requireNonNull(supportActionBar)?.setDisplayHomeAsUpEnabled(true)
 
 
@@ -78,7 +78,7 @@ class Studentdashboard : AppCompatActivity(),
                 }
 
                 R.id.nav_grammer -> {
-                    replaceFragment(grammer_fragment())
+                    replaceFragment(GrammerFragment())
                     actionBar.title = "English Grammer"
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -132,14 +132,14 @@ class Studentdashboard : AppCompatActivity(),
             //                            .commit();
             //
             //                }
-            student_page_drawer.closeDrawers()
+            studentPageDrawer.closeDrawers()
             true
         })
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Pass the event to the ActionBarDrawerToggle, if it returns true, then it has handled the app icon touch event
-        if (toggle_top_left_student_page.onOptionsItemSelected(item)) {
+        if (toggleTopLeftStudentPage.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)

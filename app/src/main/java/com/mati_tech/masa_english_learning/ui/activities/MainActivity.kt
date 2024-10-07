@@ -14,32 +14,30 @@ import com.google.android.material.navigation.NavigationView
 import java.util.Objects
 
 class MainActivity : AppCompatActivity() {
-    var main_page_drawer: DrawerLayout? = null
-    var navigationView: NavigationView? = null
-    var toggle_top_left_main_page: ActionBarDrawerToggle? = null
-    var actionBar: ActionBar? = null
+    private lateinit var mainPageDrawer: DrawerLayout
+    private lateinit var navigationView: NavigationView
+    private lateinit var toggleTopLeftMainPage: ActionBarDrawerToggle
+    private lateinit var actionBar: ActionBar
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        main_page_drawer = findViewById<DrawerLayout>(R.id.main_page_drawer_id)
+        mainPageDrawer = findViewById(R.id.main_page_drawer_id)
         navigationView =
-            findViewById<NavigationView>(R.id.drawer_menu_left_main_page_navigation_view)
-        toggle_top_left_main_page = ActionBarDrawerToggle(this@MainActivity, main_page_drawer, 0, 0)
+            findViewById(R.id.drawer_menu_left_main_page_navigation_view)
+        toggleTopLeftMainPage = ActionBarDrawerToggle(this@MainActivity, mainPageDrawer, 0, 0)
 
-        if (main_page_drawer != null) {
-            main_page_drawer!!.addDrawerListener(toggle_top_left_main_page!!)
-        }
-        toggle_top_left_main_page!!.syncState()
-        Objects.requireNonNull(supportActionBar)!!.setDisplayHomeAsUpEnabled(true)
+        mainPageDrawer.addDrawerListener(toggleTopLeftMainPage)
+        toggleTopLeftMainPage.syncState()
+        Objects.requireNonNull(supportActionBar)?.setDisplayHomeAsUpEnabled(true)
 
 
-        actionBar = supportActionBar
-        actionBar!!.setTitle("Home")
+        actionBar = supportActionBar!!
+        actionBar.setTitle("Home")
 
-        navigationView?.setNavigationItemSelectedListener(NavigationView.OnNavigationItemSelectedListener { item -> // Handle navigation item clicks
+        navigationView.setNavigationItemSelectedListener { item -> // Handle navigation item clicks
             if (item.itemId == R.id.drawer_profile) {
                 // Handle destinations item click
                 // Replace the current fragment with the "Los Angeles" fragment
@@ -65,14 +63,14 @@ class MainActivity : AppCompatActivity() {
             //                            .replace(R.id.main_fragment_of_main_activity, new settings_fragment())
             //                            .commit();
             //                }
-            main_page_drawer?.closeDrawers()
+            mainPageDrawer.closeDrawers()
             true
-        })
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Pass the event to the ActionBarDrawerToggle, if it returns true, then it has handled the app icon touch event
-        if (toggle_top_left_main_page!!.onOptionsItemSelected(item)) {
+        if (toggleTopLeftMainPage.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)

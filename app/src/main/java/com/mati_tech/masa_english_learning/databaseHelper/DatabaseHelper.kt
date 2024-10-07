@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 class DatabaseHelper // Constructor
-    (private val mContext: Context?) :
+    (private val mContext: Context) :
     SQLiteOpenHelper(mContext, DATABASE_NAME, null, databaseVersion) {
     override fun onCreate(db: SQLiteDatabase) {
         // Create the database table
@@ -33,22 +33,19 @@ class DatabaseHelper // Constructor
     }
 
     fun insertUser(username: String, password: String, role: String): Long {
-        // Get a writable database
+        var newRowId: Long = -1
         val db = this.writableDatabase
-
-        // Create a new map of values, where column names are the keys
-        val values = ContentValues()
-        values.put(columnUsername, username)
-        values.put(columnPassword, password)
-        values.put(COLUMN_ROLE, role)
-
-        // Insert the new row, returning the primary key value of the new row
-        val newRowId = db.insert(tableName, null, values)
-
-        // Close the database connection
-        db.close()
+        db.use { db ->
+            val values = ContentValues().apply {
+                put(columnUsername, username)
+                put(columnPassword, password)
+                put(COLUMN_ROLE, role)
+            }
+            newRowId = db.insert(tableName, null, values)
+        }
         return newRowId
     }
+
 
     fun readUser(username: String, password: String): Boolean {
         // Get a readable database
@@ -86,7 +83,7 @@ class DatabaseHelper // Constructor
 
     // You can delete the user here using this command
     fun deleteDatabase() {
-        mContext!!.deleteDatabase(DATABASE_NAME)
+        mContext.deleteDatabase(DATABASE_NAME)
     }
 
 

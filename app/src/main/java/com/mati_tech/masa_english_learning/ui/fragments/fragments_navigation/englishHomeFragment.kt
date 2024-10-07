@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.mati_tech.masa_english_learning.R
 
 
-class EnglishHomeFragment : Fragment() {
+class englishHomeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

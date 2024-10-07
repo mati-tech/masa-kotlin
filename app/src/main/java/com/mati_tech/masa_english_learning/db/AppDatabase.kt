@@ -11,7 +11,7 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import kotlin.concurrent.Volatile
 
-@Database(entities = [Student::class, Teacher::class, Material::class], version = 3, exportSchema = false)
+@Database(entities = [Student::class, Teacher::class, Material::class], version = 4)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun studentDao(): StudentDao
     abstract fun teacherDao(): TeacherDao
@@ -28,5 +28,6 @@ abstract class AppDatabase : RoomDatabase() {
         fun getInstance(context: Context): AppDatabase {
             return instance
         }
+
     }
 }

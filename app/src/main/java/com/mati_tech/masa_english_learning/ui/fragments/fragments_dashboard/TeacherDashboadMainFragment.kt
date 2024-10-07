@@ -11,16 +11,16 @@ import androidx.fragment.app.Fragment
 import com.mati_tech.masa_english_learning.R
 import com.mati_tech.masa_english_learning.authenticator.SessionManager
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.ExtraStudyFragment
-import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.grammer_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.GrammerFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.VocabularyFragment
 
 class TeacherDashboadMainFragment() : Fragment() {
-    lateinit var sessionManager: SessionManager
+    private lateinit var sessionManager: SessionManager
     private var mListenerteacher: OnFragmentInteractionListenerteacher? = null
-    lateinit var textView: TextView
-    lateinit var goGrammer: ImageView
-    lateinit var goVocab: ImageView
-    lateinit var goMore: ImageView
+    private lateinit var textView: TextView
+    private lateinit var goGrammer: ImageView
+    private lateinit var goVocab: ImageView
+    private lateinit var goMore: ImageView
 
     interface OnFragmentInteractionListenerteacher {
         fun onNavigateToFragmentTeacherDash(fragment: Fragment?)
@@ -56,28 +56,28 @@ class TeacherDashboadMainFragment() : Fragment() {
         sessionManager = SessionManager(requireContext())
 
         val username = sessionManager.username
-        textView = view.findViewById<TextView>(R.id.teacher_id_main_frag)
-        goGrammer = view.findViewById<ImageView>(R.id.grammer_icon_dashboardteacher)
-        goVocab = view.findViewById<ImageView>(R.id.vocab_icon_dashboardTeacher)
-        goMore = view.findViewById<ImageView>(R.id.more_icon_dashboardTeacher)
-        textView.setText("logged as: $username")
+        textView = view.findViewById(R.id.teacher_id_main_frag)
+        goGrammer = view.findViewById(R.id.grammer_icon_dashboardteacher)
+        goVocab = view.findViewById(R.id.vocab_icon_dashboardTeacher)
+        goMore = view.findViewById(R.id.more_icon_dashboardTeacher)
+        textView.text = "logged as: $username"
 
-        goGrammer.setOnClickListener(View.OnClickListener {
+        goGrammer.setOnClickListener {
             if (mListenerteacher != null) {
-                mListenerteacher!!.onNavigateToFragmentTeacherDash(grammer_fragment())
+                mListenerteacher!!.onNavigateToFragmentTeacherDash(GrammerFragment())
             }
-        })
-        goMore.setOnClickListener(View.OnClickListener {
+        }
+        goMore.setOnClickListener {
             if (mListenerteacher != null) {
                 mListenerteacher!!.onNavigateToFragmentTeacherDash(ExtraStudyFragment())
             }
-        })
+        }
 
-        goVocab.setOnClickListener(View.OnClickListener {
+        goVocab.setOnClickListener {
             if (mListenerteacher != null) {
                 mListenerteacher!!.onNavigateToFragmentTeacherDash(VocabularyFragment())
             }
-        })
+        }
     }
 
 

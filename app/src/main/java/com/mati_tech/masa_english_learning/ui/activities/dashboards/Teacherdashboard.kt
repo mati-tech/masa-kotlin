@@ -25,7 +25,7 @@ import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.Calenda
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.CourseMaterialTeacherFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_drawer.ProfileFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.ExtraStudyFragment
-import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.grammer_fragment
+import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.GrammerFragment
 import com.mati_tech.masa_english_learning.ui.fragments.fragments_navigation.VocabularyFragment
 import java.util.Objects
 
@@ -77,7 +77,7 @@ class Teacherdashboard : AppCompatActivity(),
                 }
 
                 R.id.nav_grammer -> {
-                    replaceFragment(grammer_fragment())
+                    replaceFragment(GrammerFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
 

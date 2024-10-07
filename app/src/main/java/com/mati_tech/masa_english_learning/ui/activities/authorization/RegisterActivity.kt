@@ -2,6 +2,7 @@ package com.mati_tech.masa_english_learning.ui.activities.authorization
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -54,16 +55,22 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         registerBtn.setOnClickListener {
-            regEmailStr = regEmail.getText().toString()
-            regPasswordStr = regPass.getText().toString()
-            confirmPassStr = regConfirmPass.getText().toString()
+            regEmailStr = regEmail.text.toString()
+            regPasswordStr = regPass.text.toString()
+            confirmPassStr = regConfirmPass.text.toString()
 
-            if (radioBtnStudent.isChecked) {
-                role = "student"
-            } else if (radioBtnTeacher.isChecked) {
-                role = "teacher"
+            if (regEmailStr.isEmpty() || regPasswordStr.isEmpty() || confirmPassStr.isEmpty()) {
+                Toast.makeText(this, "All fields are required!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
-            if (regPasswordStr == confirmPassStr && (radioBtnStudent.isChecked || radioBtnTeacher.isChecked)) {
+
+            role = when {
+                radioBtnStudent.isChecked -> "student"
+                radioBtnTeacher.isChecked -> "teacher"
+                else -> "user"
+            }
+
+            if (regPasswordStr == confirmPassStr && role.isNotEmpty()) {
                 signupDatabase(regEmailStr, regPasswordStr, role)
             } else {
                 Toast.makeText(
@@ -73,6 +80,7 @@ class RegisterActivity : AppCompatActivity() {
                 ).show()
             }
         }
+
     }
 
     private fun signupDatabase(username: String, password: String, role: String) {
@@ -81,6 +89,7 @@ class RegisterActivity : AppCompatActivity() {
 //            val userRole = role ?: "user"
 
             val insertRowId: Long = databaseHelper.insertUser(username, password, role)
+            Log.d("RegisterActivity", "Insert Row ID: $insertRowId")
 
             if (insertRowId != -1L) {
                 Toast.makeText(this, "Signup Successful!", Toast.LENGTH_SHORT).show()
@@ -91,6 +100,7 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Signup failed!", Toast.LENGTH_SHORT).show()
             }
         } catch (e: Exception) {
+            Log.e("RegisterActivity", "Insertion Error: ${e.message}", e)
             Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
