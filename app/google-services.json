@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "288664916274",
+    "project_id": "masa-academy",
+    "storage_bucket": "masa-academy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288664916274:android:7a97714a50f4d6311bc72b",
+        "android_client_info": {
+          "package_name": "com.mati_tech.masa_english_learning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAInaNnBB_ORhtOIB4viR4eZiH1ZuDTLvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -25,7 +25,7 @@ class ProfileFragment : Fragment() {
 
     private lateinit var username: String
     private lateinit var role: String
-    private lateinit var prof_info: TextView
+    private lateinit var profInfo: TextView
     private lateinit var nameTextView: TextView
     private lateinit var lastNameTextView: TextView
     private lateinit var ageTextView: TextView
@@ -62,11 +62,11 @@ class ProfileFragment : Fragment() {
         roleView = view.findViewById(R.id.role_view)
         EmailView = view.findViewById(R.id.email_view)
 
-        roleView.setText("Role: $role")
-        EmailView.setText("Email: $username")
+        roleView.text = "Role: $role"
+        EmailView.text = "Email: $username"
 
-        prof_info = view.findViewById(R.id.frag_profile_info_login)
-        prof_info.text = role + "Profile Info"
+        profInfo = view.findViewById(R.id.frag_profile_info_login)
+        profInfo.text = role + "Profile Info"
         CompleteProf = view.findViewById(R.id.frag_profile_complete_button)
         signout = view.findViewById(R.id.frag_profile_sign_out_button)
 
